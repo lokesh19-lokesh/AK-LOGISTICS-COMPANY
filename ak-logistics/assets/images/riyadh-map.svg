@@ -14,7 +14,7 @@
 
   <!-- Major Distribution Arteries from Riyadh Central Hub -->
   <!-- Riyadh Coordinates approx 310, 180 -->
-  <g stroke="#f36b13" stroke-width="2.5" stroke-dasharray="6,4">
+  <g stroke="#0056b3" stroke-width="2.5" stroke-dasharray="6,4">
     <!-- To Eastern Province (Dammam / Khobar) -->
     <line x1="310" y1="180" x2="430" y2="150"/>
     <!-- To Western Province (Jeddah / Makkah / Madinah) -->
@@ -40,13 +40,13 @@
   <text x="170" y="310" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#cbd5e1">Southern Region</text>
 
   <!-- Riyadh HQ Beacon -->
-  <circle cx="310" cy="180" r="28" fill="#f36b13" opacity="0.25"/>
-  <circle cx="310" cy="180" r="18" fill="#f36b13" opacity="0.5"/>
-  <circle cx="310" cy="180" r="10" fill="#ffffff" stroke="#f36b13" stroke-width="4"/>
+  <circle cx="310" cy="180" r="28" fill="#0056b3" opacity="0.25"/>
+  <circle cx="310" cy="180" r="18" fill="#0056b3" opacity="0.5"/>
+  <circle cx="310" cy="180" r="10" fill="#ffffff" stroke="#0056b3" stroke-width="4"/>
   
   <g transform="translate(230, 115)">
-    <rect width="160" height="42" rx="6" fill="#07162c" stroke="#f36b13" stroke-width="1.5"/>
+    <rect width="160" height="42" rx="6" fill="#07162c" stroke="#0056b3" stroke-width="1.5"/>
     <text x="80" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="11" fill="#ffffff" text-anchor="middle">RIYADH HEADQUARTERS</text>
-    <text x="80" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="9" fill="#f36b13" text-anchor="middle">AK Logistics Hub</text>
+    <text x="80" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="9" fill="#0056b3" text-anchor="middle">AK Logistics Hub</text>
   </g>
 </svg>

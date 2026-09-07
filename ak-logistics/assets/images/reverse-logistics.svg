@@ -10,8 +10,8 @@
   <!-- Circular Loop Vector (Reverse Logistics) -->
   <g transform="translate(180, 70)">
     <!-- Circular Arrow Arc 1 -->
-    <path d="M 120 40 A 80 80 0 0 1 200 120" fill="none" stroke="#f36b13" stroke-width="8" stroke-linecap="round"/>
-    <polygon points="190,135 208,125 208,145" fill="#f36b13"/>
+    <path d="M 120 40 A 80 80 0 0 1 200 120" fill="none" stroke="#0056b3" stroke-width="8" stroke-linecap="round"/>
+    <polygon points="190,135 208,125 208,145" fill="#0056b3"/>
     
     <!-- Circular Arrow Arc 2 -->
     <path d="M 200 120 A 80 80 0 0 1 120 200" fill="none" stroke="#38bdf8" stroke-width="8" stroke-linecap="round"/>
@@ -26,7 +26,7 @@
     <!-- Center Hub Box -->
     <circle cx="120" cy="120" r="42" fill="#07162c" stroke="#334155" stroke-width="3"/>
     <text x="120" y="116" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="11" fill="#ffffff" text-anchor="middle">REVERSE</text>
-    <text x="120" y="132" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10" fill="#f36b13" text-anchor="middle">FLOW</text>
+    <text x="120" y="132" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10" fill="#0056b3" text-anchor="middle">FLOW</text>
   </g>
 
   <!-- Labels -->

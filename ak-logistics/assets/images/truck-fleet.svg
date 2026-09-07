@@ -5,20 +5,20 @@
       <stop offset="100%" stop-color="#163663"/>
     </linearGradient>
     <linearGradient id="orangeG" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f36b13"/>
-      <stop offset="100%" stop-color="#ff8533"/>
+      <stop offset="0%" stop-color="#0056b3"/>
+      <stop offset="100%" stop-color="#1a73e8"/>
     </linearGradient>
   </defs>
   <rect width="600" height="380" rx="14" fill="url(#tGrad)"/>
   <!-- Road Horizon -->
   <polygon points="0,290 600,290 420,180 180,180" fill="#1b2a47"/>
   <polygon points="200,290 400,290 310,180 290,180" fill="#24375b"/>
-  <line x1="300" y1="180" x2="300" y2="290" stroke="#f36b13" stroke-width="3" stroke-dasharray="10,10"/>
+  <line x1="300" y1="180" x2="300" y2="290" stroke="#0056b3" stroke-width="3" stroke-dasharray="10,10"/>
   <!-- Fleet Truck in Foreground -->
   <g transform="translate(110, 130)">
     <rect x="50" y="30" width="240" height="95" rx="5" fill="#ffffff"/>
     <text x="65" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="16" fill="#0d2342">AK LOGISTICS</text>
-    <text x="65" y="82" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9" fill="#f36b13">FTL / LTL FREIGHT SOLUTIONS</text>
+    <text x="65" y="82" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9" fill="#0056b3">FTL / LTL FREIGHT SOLUTIONS</text>
     <path d="M 290 50 L 340 50 L 375 85 L 380 125 L 290 125 Z" fill="url(#orangeG)"/>
     <path d="M 305 60 L 340 60 L 365 85 L 305 85 Z" fill="#07162c"/>
     <!-- Wheels -->
@@ -34,7 +34,7 @@
   <!-- Route badge -->
   <g transform="translate(40, 40)">
     <rect width="210" height="50" rx="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)"/>
-    <circle cx="25" cy="25" r="10" fill="#f36b13"/>
+    <circle cx="25" cy="25" r="10" fill="#0056b3"/>
     <text x="45" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" fill="#ffffff">Regional &amp; Cross-City</text>
     <text x="45" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="10" fill="#94a3b8">Optimized Route Management</text>
   </g>

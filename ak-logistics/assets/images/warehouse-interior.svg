@@ -27,20 +27,20 @@
 
   <!-- Pallets and Cargo Boxes -->
   <!-- Left Rack Boxes -->
-  <rect x="95" y="70" width="90" height="48" rx="3" fill="#f36b13"/>
+  <rect x="95" y="70" width="90" height="48" rx="3" fill="#0056b3"/>
   <rect x="95" y="150" width="40" height="48" rx="3" fill="#e2e8f0"/>
   <rect x="145" y="150" width="40" height="48" rx="3" fill="#cbd5e1"/>
   <rect x="95" y="230" width="90" height="48" rx="3" fill="#3b82f6" opacity="0.8"/>
   
   <!-- Right Rack Boxes -->
   <rect x="415" y="70" width="40" height="48" rx="3" fill="#e2e8f0"/>
-  <rect x="465" y="70" width="40" height="48" rx="3" fill="#f36b13"/>
+  <rect x="465" y="70" width="40" height="48" rx="3" fill="#0056b3"/>
   <rect x="415" y="150" width="90" height="48" rx="3" fill="#ffffff"/>
-  <rect x="415" y="230" width="90" height="48" rx="3" fill="#f36b13" opacity="0.9"/>
+  <rect x="415" y="230" width="90" height="48" rx="3" fill="#0056b3" opacity="0.9"/>
 
   <!-- Forklift Silhouette in Center Aisle -->
   <g transform="translate(250, 220)">
-    <rect x="25" y="60" width="55" height="40" rx="6" fill="#f36b13"/>
+    <rect x="25" y="60" width="55" height="40" rx="6" fill="#0056b3"/>
     <rect x="60" y="30" width="20" height="40" rx="3" fill="#1e293b"/>
     <line x1="85" y1="10" x2="85" y2="100" stroke="#cbd5e1" stroke-width="4"/>
     <polygon points="85,60 110,60 110,65 85,65" fill="#e2e8f0"/>

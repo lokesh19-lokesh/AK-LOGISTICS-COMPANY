@@ -1,44 +1,50 @@
 /* ==========================================================================
    AK LOGISTICS COMPANY - OFFICIAL STYLESHEET
    Location: Riyadh, Kingdom of Saudi Arabia
-   Description: Premium corporate 3PL logistics and supply chain website
+   Theme: Corporate 3PL Logistics (Deep Navy Blue, Logistics Blue, Silver, Charcoal)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
    1. CSS Custom Properties & Design Tokens
    -------------------------------------------------------------------------- */
 :root {
-  /* Brand Colors */
-  --ak-navy-dark: #07162c;
-  --ak-navy: #0d2342;
-  --ak-navy-light: #163663;
-  --ak-navy-subtle: #e9eff7;
-  
-  --ak-orange: #f36b13;
-  --ak-orange-dark: #d85705;
-  --ak-orange-light: #ff8533;
-  --ak-orange-subtle: #fff2ea;
+  /* Main Corporate Colors */
+  --ak-navy-dark: #07152b;       /* Deepest Navy for Hero, Footer, and Button Hover */
+  --ak-navy: #0b1c38;            /* Primary Deep Navy Blue for Navbar, Headings */
+  --ak-navy-light: #132b50;      /* Lighter Navy for accents/gradients */
+  --ak-navy-subtle: #e6edf7;
 
-  --ak-gray-100: #f8fafc;
-  --ak-gray-200: #eef2f6;
-  --ak-gray-300: #e2e8f0;
-  --ak-gray-400: #94a3b8;
-  --ak-gray-600: #475569;
-  --ak-gray-800: #1e293b;
-  --ak-gray-900: #0f172a;
+  /* Logistics Blue (Matching Logo Emblem) */
+  --ak-blue: #0056b3;            /* Primary Logistics Blue for Buttons, Icons, Links */
+  --ak-blue-dark: #003d82;       /* Darker Blue for active states */
+  --ak-blue-light: #1a73e8;      /* Bright Blue for links/hover on dark */
+  --ak-blue-subtle: #e8f1fc;     /* Soft blue for icon backgrounds & badges */
+
+  /* Silver & Grays (Supporting Accent & Structure) */
+  --ak-silver-100: #ffffff;
+  --ak-silver-200: #eef2f6;      /* Light Silver for alternating sections */
+  --ak-silver-300: #cbd5e1;      /* Light Silver for Card borders & dividers */
+  --ak-silver-400: #94a3b8;      /* Mid Silver for secondary meta text */
+  --ak-silver-500: #64748b;      /* Slate Silver */
+  --ak-silver-border: #cbd5e1;   /* Standard card border */
+  
+  /* Charcoal Body Text */
+  --ak-charcoal: #2d3748;        /* Main Body text with high readability */
+  --ak-charcoal-dark: #1a202c;
+  --ak-charcoal-light: #4a5568;
 
   --ak-white: #ffffff;
-  --ak-text-main: #334155;
-  --ak-text-heading: #0d2342;
+  --ak-text-main: var(--ak-charcoal);
+  --ak-text-heading: var(--ak-navy);
 
   /* Typography */
   --ak-font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
   /* Shadows */
-  --ak-shadow-sm: 0 2px 6px rgba(13, 35, 66, 0.06);
-  --ak-shadow-md: 0 10px 25px -3px rgba(13, 35, 66, 0.08), 0 4px 6px -2px rgba(13, 35, 66, 0.04);
-  --ak-shadow-lg: 0 20px 35px -5px rgba(13, 35, 66, 0.12), 0 10px 10px -5px rgba(13, 35, 66, 0.04);
-  --ak-shadow-hover: 0 22px 40px -6px rgba(243, 107, 19, 0.18), 0 12px 18px -4px rgba(13, 35, 66, 0.08);
+  --ak-shadow-sm: 0 2px 6px rgba(11, 28, 56, 0.05);
+  --ak-shadow-md: 0 10px 25px -3px rgba(11, 28, 56, 0.08), 0 4px 6px -2px rgba(11, 28, 56, 0.04);
+  --ak-shadow-lg: 0 20px 35px -5px rgba(11, 28, 56, 0.12), 0 10px 10px -5px rgba(11, 28, 56, 0.04);
+  --ak-shadow-hover: 0 16px 32px -4px rgba(0, 86, 179, 0.16), 0 8px 12px -3px rgba(11, 28, 56, 0.06);
 
   /* Transitions */
   --ak-transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -71,7 +77,7 @@ body {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: var(--ak-font-sans);
-  color: var(--ak-text-heading);
+  color: var(--ak-navy); /* Section Headings: Deep Navy Blue */
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.02em;
@@ -79,16 +85,17 @@ h1, h2, h3, h4, h5, h6,
 
 p {
   margin-bottom: 1.25rem;
+  color: var(--ak-charcoal); /* Body text: Charcoal */
 }
 
 a {
-  color: var(--ak-navy);
+  color: var(--ak-blue); /* Links: Logistics Blue */
   text-decoration: none;
   transition: color var(--ak-transition-fast);
 }
 
 a:hover {
-  color: var(--ak-orange);
+  color: var(--ak-blue-dark);
 }
 
 img, svg {
@@ -102,10 +109,10 @@ img, svg {
    -------------------------------------------------------------------------- */
 .ak-topbar {
   background-color: var(--ak-navy-dark);
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.82);
   font-size: 0.85rem;
   padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(203, 213, 225, 0.15); /* Subtle silver border */
 }
 
 .ak-topbar a {
@@ -114,7 +121,7 @@ img, svg {
 }
 
 .ak-topbar a:hover {
-  color: var(--ak-orange);
+  color: var(--ak-blue-light);
 }
 
 .ak-topbar-item {
@@ -124,93 +131,72 @@ img, svg {
 }
 
 .ak-topbar-item i {
-  color: var(--ak-orange);
+  color: var(--ak-blue-light); /* Icons: Logistics Blue */
 }
 
 /* --------------------------------------------------------------------------
-   4. Navigation Bar
+   4. Navigation Bar (Deep Navy Blue)
    -------------------------------------------------------------------------- */
 .ak-navbar {
-  background-color: var(--ak-white);
-  box-shadow: var(--ak-shadow-sm);
-  padding: 14px 0;
+  background-color: var(--ak-navy); /* Navbar: Deep Navy Blue */
+  box-shadow: 0 4px 18px rgba(7, 21, 43, 0.25);
+  padding: 10px 0;
   position: sticky;
   top: 0;
   z-index: 1040;
   transition: padding var(--ak-transition-base), box-shadow var(--ak-transition-base);
+  border-bottom: 1px solid rgba(203, 213, 225, 0.18); /* Light silver accent */
 }
 
 .ak-navbar.scrolled {
-  padding: 10px 0;
-  box-shadow: var(--ak-shadow-md);
+  padding: 6px 0;
+  box-shadow: 0 8px 24px rgba(7, 21, 43, 0.35);
 }
 
-/* Brand Logo */
+.ak-navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand Logo (Blue + Silver Emblem) */
 .ak-brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  font-weight: 800;
-  font-size: 1.35rem;
-  color: var(--ak-navy);
-  letter-spacing: -0.02em;
+  text-decoration: none;
+  padding: 0;
+  margin-right: 1.75rem;
+  line-height: 1;
 }
 
 .ak-brand:hover {
-  color: var(--ak-navy);
+  opacity: 0.95;
 }
 
-.ak-brand-icon {
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(135deg, var(--ak-navy) 0%, var(--ak-navy-light) 100%);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--ak-white);
-  font-size: 1.25rem;
-  box-shadow: 0 4px 12px rgba(13, 35, 66, 0.2);
-  position: relative;
-  overflow: hidden;
+.ak-brand-img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.45));
+  transition: transform var(--ak-transition-fast), width var(--ak-transition-base), height var(--ak-transition-base);
+  flex-shrink: 0;
 }
 
-.ak-brand-icon::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 14px;
-  height: 14px;
-  background-color: var(--ak-orange);
-  border-radius: 4px 0 10px 0;
+.ak-brand:hover .ak-brand-img {
+  transform: scale(1.05);
 }
 
-.ak-brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
+.ak-navbar.scrolled .ak-brand-img {
+  width: 58px;
+  height: 58px;
 }
 
-.ak-brand-title {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--ak-navy);
-}
-
-.ak-brand-subtitle {
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--ak-orange-dark);
-  font-weight: 700;
-}
-
-/* Nav Links */
+/* Nav Links on Deep Navy Navbar */
 .ak-navbar .nav-link {
   font-weight: 600;
   font-size: 0.95rem;
-  color: var(--ak-gray-800);
+  color: rgba(255, 255, 255, 0.88) !important;
   padding: 0.5rem 0.9rem !important;
   border-radius: 6px;
   transition: all var(--ak-transition-fast);
@@ -219,13 +205,25 @@ img, svg {
 .ak-navbar .nav-link:hover,
 .ak-navbar .nav-link:focus,
 .ak-navbar .nav-link.active {
-  color: var(--ak-orange);
-  background-color: var(--ak-orange-subtle);
+  color: var(--ak-white) !important;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Mobile Toggler Button */
+.ak-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.3);
+  padding: 6px 10px;
+}
+
+.ak-navbar .navbar-toggler i {
+  color: var(--ak-white);
+  font-size: 1.75rem;
 }
 
 /* Dropdown Menu */
 .ak-navbar .dropdown-menu {
-  border: 1px solid var(--ak-gray-200);
+  background-color: var(--ak-white);
+  border: 1px solid var(--ak-silver-300);
   box-shadow: var(--ak-shadow-lg);
   border-radius: 12px;
   padding: 10px;
@@ -249,7 +247,7 @@ img, svg {
   font-size: 0.9rem;
   padding: 8px 14px;
   border-radius: 8px;
-  color: var(--ak-gray-800);
+  color: var(--ak-charcoal);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -257,51 +255,58 @@ img, svg {
 }
 
 .ak-navbar .dropdown-item i {
-  color: var(--ak-orange);
+  color: var(--ak-blue); /* Icons: Logistics Blue */
   font-size: 1rem;
 }
 
 .ak-navbar .dropdown-item:hover,
 .ak-navbar .dropdown-item:focus,
 .ak-navbar .dropdown-item.active {
-  background-color: var(--ak-navy-subtle);
-  color: var(--ak-navy);
+  background-color: var(--ak-blue-subtle);
+  color: var(--ak-blue-dark);
   transform: translateX(4px);
 }
 
-/* Header CTA Button */
-.btn-ak-quote {
-  background-color: var(--ak-orange);
+/* --------------------------------------------------------------------------
+   5. Buttons (Primary: Logistics Blue | Hover: Deep Navy Blue)
+   -------------------------------------------------------------------------- */
+.btn-ak-quote,
+.btn-ak-primary {
+  background-color: var(--ak-blue) !important;       /* Primary buttons: Logistics Blue */
   color: var(--ak-white) !important;
   font-weight: 700;
   font-size: 0.92rem;
-  padding: 9px 20px;
+  padding: 10px 22px;
   border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(243, 107, 19, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 86, 179, 0.28);
   transition: all var(--ak-transition-base);
-  border: 1px solid transparent;
+  border: 1px solid var(--ak-blue) !important;
   display: inline-flex;
   align-items: center;
   gap: 8px;
 }
 
-.btn-ak-quote:hover {
-  background-color: var(--ak-orange-dark);
-  box-shadow: 0 6px 20px rgba(216, 87, 5, 0.4);
-  transform: translateY(-1px);
+.btn-ak-quote:hover,
+.btn-ak-primary:hover {
+  background-color: var(--ak-navy-dark) !important;   /* Button hover: Deep Navy Blue */
+  border-color: var(--ak-silver-300) !important;      /* Supporting silver border */
+  color: var(--ak-white) !important;
+  box-shadow: 0 6px 20px rgba(7, 21, 43, 0.4);
+  transform: translateY(-2px);
 }
 
-.btn-ak-quote:active {
+.btn-ak-quote:active,
+.btn-ak-primary:active {
   transform: translateY(0);
 }
 
-/* Secondary Button */
+/* Secondary Outline Button */
 .btn-ak-outline {
   color: var(--ak-white);
   background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.7);
+  border: 2px solid var(--ak-silver-300); /* Supporting Silver border */
   font-weight: 600;
-  padding: 8px 20px;
+  padding: 9px 20px;
   border-radius: 8px;
   transition: all var(--ak-transition-base);
   display: inline-flex;
@@ -310,43 +315,24 @@ img, svg {
 }
 
 .btn-ak-outline:hover {
-  background-color: var(--ak-white);
-  color: var(--ak-navy);
-  border-color: var(--ak-white);
-}
-
-.btn-ak-primary {
-  background-color: var(--ak-navy);
+  background-color: var(--ak-blue);
   color: var(--ak-white);
-  font-weight: 600;
-  padding: 10px 22px;
-  border-radius: 8px;
-  border: none;
-  transition: all var(--ak-transition-base);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.btn-ak-primary:hover {
-  background-color: var(--ak-navy-light);
-  color: var(--ak-white);
+  border-color: var(--ak-blue);
   transform: translateY(-2px);
-  box-shadow: var(--ak-shadow-md);
 }
 
 /* --------------------------------------------------------------------------
-   5. Hero Sections
+   6. Hero Sections (Deep Navy Blue Background, White Text)
    -------------------------------------------------------------------------- */
 .ak-hero {
   position: relative;
-  background-color: var(--ak-navy-dark);
-  color: var(--ak-white);
+  background-color: var(--ak-navy-dark); /* Hero background: Deep Navy Blue */
+  color: var(--ak-white);                /* Hero text: White */
   padding: 90px 0 80px;
   overflow: hidden;
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(22, 54, 99, 0.6) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(243, 107, 19, 0.12) 0%, transparent 40%);
+    radial-gradient(circle at 10% 20%, rgba(19, 43, 80, 0.6) 0%, transparent 45%),
+    radial-gradient(circle at 90% 80%, rgba(0, 86, 179, 0.15) 0%, transparent 45%);
 }
 
 .ak-hero-overlay {
@@ -355,7 +341,7 @@ img, svg {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(7, 22, 44, 0.95) 0%, rgba(13, 35, 66, 0.88) 100%);
+  background: linear-gradient(135deg, rgba(7, 21, 43, 0.96) 0%, rgba(11, 28, 56, 0.9) 100%);
   z-index: 1;
 }
 
@@ -368,9 +354,9 @@ img, svg {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: rgba(243, 107, 19, 0.18);
-  color: #ffa466;
-  border: 1px solid rgba(243, 107, 19, 0.4);
+  background-color: rgba(0, 86, 179, 0.25);
+  color: #cbe0fc; /* Silver/ice blue highlight */
+  border: 1px solid rgba(203, 213, 225, 0.35); /* Silver accent border */
   padding: 6px 14px;
   border-radius: 50px;
   font-size: 0.85rem;
@@ -381,7 +367,7 @@ img, svg {
 }
 
 .ak-hero-title {
-  color: var(--ak-white);
+  color: var(--ak-white); /* Hero text: White */
   font-size: clamp(2.2rem, 4vw, 3.4rem);
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -391,7 +377,7 @@ img, svg {
 
 .ak-hero-subtitle {
   font-size: clamp(1.05rem, 1.6vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.9); /* Hero text: White */
   max-width: 600px;
   line-height: 1.6;
   margin-bottom: 30px;
@@ -403,30 +389,32 @@ img, svg {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--ak-silver-300); /* Silver border */
 }
 
 .ak-hero-inner {
   position: relative;
-  background-color: var(--ak-navy-dark);
-  color: var(--ak-white);
+  background-color: var(--ak-navy-dark); /* Deep Navy Blue */
+  color: var(--ak-white);                /* White Text */
   padding: 60px 0 50px;
-  background-image: linear-gradient(135deg, rgba(7, 22, 44, 0.96) 0%, rgba(13, 35, 66, 0.92) 100%);
+  background-image: linear-gradient(135deg, rgba(7, 21, 43, 0.98) 0%, rgba(11, 28, 56, 0.94) 100%);
+  border-bottom: 1px solid rgba(203, 213, 225, 0.15);
 }
 
 .ak-hero-inner .ak-hero-title {
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
   margin-bottom: 12px;
+  color: var(--ak-white);
 }
 
 .ak-hero-inner .ak-hero-subtitle {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.88);
   margin-bottom: 15px;
 }
 
 /* --------------------------------------------------------------------------
-   6. Breadcrumbs
+   7. Breadcrumbs
    -------------------------------------------------------------------------- */
 .ak-breadcrumb {
   background: transparent;
@@ -440,11 +428,11 @@ img, svg {
 }
 
 .ak-breadcrumb .breadcrumb-item a:hover {
-  color: var(--ak-orange-light);
+  color: var(--ak-blue-light);
 }
 
 .ak-breadcrumb .breadcrumb-item.active {
-  color: var(--ak-orange);
+  color: var(--ak-silver-300);
   font-weight: 600;
 }
 
@@ -453,7 +441,7 @@ img, svg {
 }
 
 /* --------------------------------------------------------------------------
-   7. Section Headers & Layouts
+   8. Section Headers & Layouts
    -------------------------------------------------------------------------- */
 .section-padding {
   padding: 80px 0;
@@ -463,8 +451,9 @@ img, svg {
   padding: 50px 0;
 }
 
+/* Alternating Sections: Light Silver */
 .bg-light-surface {
-  background-color: var(--ak-gray-100);
+  background-color: var(--ak-silver-200); /* Alternating sections: Light Silver */
 }
 
 .bg-navy-surface {
@@ -482,14 +471,14 @@ img, svg {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--ak-orange);
+  color: var(--ak-blue); /* Highlights: Logistics Blue */
   margin-bottom: 8px;
 }
 
 .ak-section-title {
   font-size: clamp(1.8rem, 2.5vw, 2.4rem);
   font-weight: 800;
-  color: var(--ak-navy);
+  color: var(--ak-navy); /* Section headings: Deep Navy Blue */
   margin-bottom: 12px;
 }
 
@@ -499,20 +488,20 @@ img, svg {
 
 .ak-section-desc {
   font-size: 1.05rem;
-  color: var(--ak-gray-600);
+  color: var(--ak-charcoal-light);
   max-width: 680px;
 }
 
 .bg-navy-surface .ak-section-desc {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* --------------------------------------------------------------------------
-   8. Cards & Feature Items
+   9. Service Cards & Feature Items (Service Cards: White | Card Borders: Light Silver)
    -------------------------------------------------------------------------- */
 .ak-card {
-  background-color: var(--ak-white);
-  border: 1px solid var(--ak-gray-200);
+  background-color: var(--ak-white);       /* Service cards: White */
+  border: 1px solid var(--ak-silver-border); /* Card borders: Light Silver */
   border-radius: 12px;
   padding: 30px 24px;
   height: 100%;
@@ -524,40 +513,42 @@ img, svg {
 
 .ak-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--ak-shadow-md);
-  border-color: rgba(243, 107, 19, 0.3);
+  box-shadow: var(--ak-shadow-hover);
+  border-color: var(--ak-blue); /* Highlight border on hover: Logistics Blue */
 }
 
+/* Icons: Logistics Blue */
 .ak-card-icon {
-  width: 60px;
-  height: 60px;
-  background-color: var(--ak-navy-subtle);
+  width: 58px;
+  height: 58px;
+  background-color: var(--ak-blue-subtle);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.7rem;
-  color: var(--ak-navy);
+  font-size: 1.6rem;
+  color: var(--ak-blue); /* Icons: Logistics Blue */
   margin-bottom: 20px;
   transition: all var(--ak-transition-fast);
+  border: 1px solid rgba(0, 86, 179, 0.15);
 }
 
 .ak-card:hover .ak-card-icon {
-  background-color: var(--ak-orange);
+  background-color: var(--ak-blue);
   color: var(--ak-white);
   transform: scale(1.05);
 }
 
 .ak-card-title {
-  font-size: 1.25rem;
+  font-size: 1.22rem;
   font-weight: 700;
   margin-bottom: 12px;
-  color: var(--ak-navy);
+  color: var(--ak-navy); /* Headings: Deep Navy Blue */
 }
 
 .ak-card-text {
   font-size: 0.95rem;
-  color: var(--ak-gray-600);
+  color: var(--ak-charcoal); /* Body text: Charcoal */
   flex-grow: 1;
   margin-bottom: 20px;
 }
@@ -565,7 +556,7 @@ img, svg {
 .ak-card-link {
   font-weight: 700;
   font-size: 0.9rem;
-  color: var(--ak-orange);
+  color: var(--ak-blue); /* Links: Logistics Blue */
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -573,7 +564,12 @@ img, svg {
 }
 
 .ak-card-link i {
+  color: var(--ak-blue);
   transition: transform var(--ak-transition-fast);
+}
+
+.ak-card-link:hover {
+  color: var(--ak-blue-dark);
 }
 
 .ak-card-link:hover i {
@@ -589,7 +585,7 @@ img, svg {
 
 .ak-feature-list li {
   font-size: 0.9rem;
-  color: var(--ak-gray-600);
+  color: var(--ak-charcoal);
   padding: 5px 0;
   display: flex;
   align-items: flex-start;
@@ -597,7 +593,7 @@ img, svg {
 }
 
 .ak-feature-list li i {
-  color: var(--ak-orange);
+  color: var(--ak-blue); /* Icons: Logistics Blue */
   font-size: 1rem;
   margin-top: 3px;
   flex-shrink: 0;
@@ -606,24 +602,24 @@ img, svg {
 /* Value Cards (About Page) */
 .ak-value-card {
   background-color: var(--ak-white);
-  border: 1px solid var(--ak-gray-200);
+  border: 1px solid var(--ak-silver-border); /* Card borders: Light Silver */
   border-radius: 12px;
   padding: 24px 20px;
   height: 100%;
-  border-left: 4px solid var(--ak-navy);
+  border-left: 4px solid var(--ak-blue);    /* Logistics Blue Accent */
   transition: all var(--ak-transition-base);
 }
 
 .ak-value-card:hover {
-  border-left-color: var(--ak-orange);
+  border-left-color: var(--ak-navy);
   transform: translateY(-4px);
   box-shadow: var(--ak-shadow-md);
 }
 
 .ak-value-card .value-num {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 800;
-  color: var(--ak-gray-400);
+  color: var(--ak-silver-400);
   letter-spacing: 0.05em;
   margin-bottom: 6px;
 }
@@ -631,16 +627,17 @@ img, svg {
 .ak-value-card h5 {
   font-size: 1.15rem;
   margin-bottom: 8px;
+  color: var(--ak-navy);
 }
 
 .ak-value-card p {
   font-size: 0.9rem;
   margin: 0;
-  color: var(--ak-gray-600);
+  color: var(--ak-charcoal);
 }
 
 /* --------------------------------------------------------------------------
-   9. Call to Action Banner (Reusable)
+   10. Call to Action Banner (Reusable)
    -------------------------------------------------------------------------- */
 .ak-cta-banner {
   background: linear-gradient(135deg, var(--ak-navy) 0%, var(--ak-navy-dark) 100%);
@@ -650,6 +647,7 @@ img, svg {
   position: relative;
   overflow: hidden;
   box-shadow: var(--ak-shadow-lg);
+  border: 1px solid var(--ak-silver-300); /* Supporting Silver border */
 }
 
 .ak-cta-banner::before {
@@ -659,7 +657,7 @@ img, svg {
   right: -10%;
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle, rgba(243, 107, 19, 0.25) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 86, 179, 0.3) 0%, transparent 70%);
   border-radius: 50%;
 }
 
@@ -672,17 +670,17 @@ img, svg {
 
 .ak-cta-banner p {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.9);
   max-width: 680px;
   margin-bottom: 25px;
 }
 
 /* --------------------------------------------------------------------------
-   10. Forms & Validation
+   11. Forms & Validation (Form Focus Border: Logistics Blue)
    -------------------------------------------------------------------------- */
 .ak-form-card {
   background-color: var(--ak-white);
-  border: 1px solid var(--ak-gray-200);
+  border: 1px solid var(--ak-silver-border); /* Light Silver border */
   border-radius: 14px;
   padding: 35px 30px;
   box-shadow: var(--ak-shadow-md);
@@ -691,29 +689,29 @@ img, svg {
 .ak-form-label {
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--ak-gray-800);
+  color: var(--ak-navy); /* Deep Navy */
   margin-bottom: 6px;
 }
 
 .ak-form-control,
 .ak-form-select {
-  border: 1px solid var(--ak-gray-300);
+  border: 1px solid var(--ak-silver-300); /* Light Silver */
   border-radius: 8px;
   padding: 11px 14px;
   font-size: 0.95rem;
-  color: var(--ak-gray-900);
+  color: var(--ak-charcoal-dark);
   background-color: var(--ak-white);
   transition: border-color var(--ak-transition-fast), box-shadow var(--ak-transition-fast);
 }
 
+/* Form Focus Border: Logistics Blue */
 .ak-form-control:focus,
 .ak-form-select:focus {
-  border-color: var(--ak-orange);
-  box-shadow: 0 0 0 3px rgba(243, 107, 19, 0.15);
+  border-color: var(--ak-blue) !important;
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.18) !important;
   outline: none;
 }
 
-/* Modern Accessible User-Invalid state */
 .ak-form-control:user-invalid,
 .ak-form-select:user-invalid {
   border-color: #dc3545;
@@ -722,15 +720,15 @@ img, svg {
 
 .form-help-text {
   font-size: 0.8rem;
-  color: var(--ak-gray-400);
+  color: var(--ak-silver-500);
   margin-top: 4px;
 }
 
 /* --------------------------------------------------------------------------
-   11. FAQ Accordion
+   12. FAQ Accordion
    -------------------------------------------------------------------------- */
 .ak-accordion .accordion-item {
-  border: 1px solid var(--ak-gray-200);
+  border: 1px solid var(--ak-silver-border);
   border-radius: 10px !important;
   margin-bottom: 12px;
   overflow: hidden;
@@ -746,25 +744,25 @@ img, svg {
 }
 
 .ak-accordion .accordion-button:not(.collapsed) {
-  background-color: var(--ak-navy-subtle);
-  color: var(--ak-navy);
+  background-color: var(--ak-blue-subtle);
+  color: var(--ak-blue-dark);
   box-shadow: none;
 }
 
 .ak-accordion .accordion-button:focus {
   box-shadow: none;
-  border-color: var(--ak-gray-200);
+  border-color: var(--ak-silver-border);
 }
 
 .ak-accordion .accordion-body {
   padding: 18px 20px;
-  color: var(--ak-gray-600);
+  color: var(--ak-charcoal);
   font-size: 0.95rem;
   line-height: 1.7;
 }
 
 /* --------------------------------------------------------------------------
-   12. Quick Action / Floating WhatsApp Widget
+   13. Quick Action / Floating WhatsApp Widget
    -------------------------------------------------------------------------- */
 .ak-floating-actions {
   position: fixed;
@@ -805,7 +803,7 @@ img, svg {
 }
 
 .ak-float-quote {
-  background-color: var(--ak-orange);
+  background-color: var(--ak-blue); /* Logistics Blue */
 }
 
 /* Scroll To Top Button */
@@ -823,7 +821,7 @@ img, svg {
   justify-content: center;
   font-size: 1.1rem;
   box-shadow: var(--ak-shadow-md);
-  border: none;
+  border: 1px solid var(--ak-silver-300);
   opacity: 0;
   visibility: hidden;
   transition: all var(--ak-transition-base);
@@ -836,23 +834,23 @@ img, svg {
 }
 
 .ak-back-to-top:hover {
-  background-color: var(--ak-orange);
+  background-color: var(--ak-blue);
   color: var(--ak-white);
   transform: translateY(-3px);
 }
 
 /* --------------------------------------------------------------------------
-   13. Footer
+   14. Footer (Deep Navy Blue | Footer Text: White / Silver)
    -------------------------------------------------------------------------- */
 .ak-footer {
-  background-color: var(--ak-navy-dark);
-  color: rgba(255, 255, 255, 0.8);
+  background-color: var(--ak-navy-dark); /* Footer: Deep Navy Blue */
+  color: var(--ak-silver-400);            /* Footer text: Silver */
   padding: 70px 0 25px;
-  border-top: 4px solid var(--ak-orange);
+  border-top: 4px solid var(--ak-blue);  /* Supporting Logistics Blue accent line */
 }
 
 .ak-footer h5 {
-  color: var(--ak-white);
+  color: var(--ak-white);                /* Footer headings: White */
   font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 20px;
@@ -867,13 +865,22 @@ img, svg {
   left: 0;
   width: 36px;
   height: 3px;
-  background-color: var(--ak-orange);
+  background-color: var(--ak-blue);      /* Logistics Blue */
   border-radius: 2px;
 }
 
 .ak-footer p {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);     /* Footer text: White / Silver */
   font-size: 0.92rem;
+}
+
+.ak-footer-brand-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.45));
+  flex-shrink: 0;
 }
 
 .ak-footer-links {
@@ -887,7 +894,7 @@ img, svg {
 }
 
 .ak-footer-links a {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--ak-silver-300);           /* Footer text: Silver */
   font-size: 0.92rem;
   display: inline-flex;
   align-items: center;
@@ -896,7 +903,7 @@ img, svg {
 }
 
 .ak-footer-links a i {
-  color: var(--ak-orange);
+  color: var(--ak-blue-light);          /* Icons: Logistics Blue */
   font-size: 0.75rem;
 }
 
@@ -914,7 +921,7 @@ img, svg {
 }
 
 .ak-footer-contact-item i {
-  color: var(--ak-orange);
+  color: var(--ak-blue-light);          /* Icons: Logistics Blue */
   font-size: 1.1rem;
   margin-top: 3px;
 }
@@ -922,25 +929,25 @@ img, svg {
 .ak-footer-bottom {
   margin-top: 50px;
   padding-top: 25px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(203, 213, 225, 0.15); /* Light Silver line */
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--ak-silver-400);          /* Silver */
 }
 
 .ak-footer-bottom a {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--ak-silver-300);
 }
 
 .ak-footer-bottom a:hover {
-  color: var(--ak-orange);
+  color: var(--ak-white);
 }
 
 /* --------------------------------------------------------------------------
-   14. Industry Badges & Highlights
+   15. Industry Badges & Highlights
    -------------------------------------------------------------------------- */
 .ak-industry-card {
   background: var(--ak-white);
-  border: 1px solid var(--ak-gray-200);
+  border: 1px solid var(--ak-silver-border); /* Light Silver */
   border-radius: 12px;
   padding: 24px;
   height: 100%;
@@ -948,8 +955,8 @@ img, svg {
 }
 
 .ak-industry-card:hover {
-  border-color: var(--ak-orange);
-  box-shadow: var(--ak-shadow-md);
+  border-color: var(--ak-blue);              /* Logistics Blue */
+  box-shadow: var(--ak-shadow-hover);
   transform: translateY(-4px);
 }
 
@@ -957,8 +964,8 @@ img, svg {
   width: 52px;
   height: 52px;
   border-radius: 10px;
-  background-color: var(--ak-navy-subtle);
-  color: var(--ak-navy);
+  background-color: var(--ak-blue-subtle);
+  color: var(--ak-blue);                     /* Icons: Logistics Blue */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -968,12 +975,47 @@ img, svg {
 }
 
 .ak-industry-card:hover .ak-industry-icon {
-  background-color: var(--ak-orange);
+  background-color: var(--ak-blue);
   color: var(--ak-white);
 }
 
 /* --------------------------------------------------------------------------
-   15. Responsive Refinements
+   16. Corporate Color Utility Overrides
+   -------------------------------------------------------------------------- */
+.text-primary, .text-ak-blue {
+  color: var(--ak-blue) !important;
+}
+
+.bg-primary, .bg-ak-blue {
+  background-color: var(--ak-blue) !important;
+}
+
+.border-primary, .border-ak-blue {
+  border-color: var(--ak-blue) !important;
+}
+
+.text-navy, .text-ak-navy {
+  color: var(--ak-navy) !important;
+}
+
+.bg-navy, .bg-ak-navy {
+  background-color: var(--ak-navy) !important;
+}
+
+.text-silver {
+  color: var(--ak-silver-400) !important;
+}
+
+.border-silver {
+  border-color: var(--ak-silver-300) !important;
+}
+
+.text-charcoal {
+  color: var(--ak-charcoal) !important;
+}
+
+/* --------------------------------------------------------------------------
+   17. Responsive Refinements
    -------------------------------------------------------------------------- */
 @media (max-width: 991.98px) {
   .ak-topbar {
@@ -981,11 +1023,17 @@ img, svg {
   }
   
   .ak-navbar .navbar-collapse {
-    background-color: var(--ak-white);
-    padding: 16px 20px;
+    background-color: var(--ak-navy-dark);
+    padding: 18px 20px;
     border-radius: 12px;
     box-shadow: var(--ak-shadow-lg);
     margin-top: 10px;
+    border: 1px solid rgba(203, 213, 225, 0.2);
+  }
+
+  .ak-brand-img {
+    width: 58px;
+    height: 58px;
   }
 
   .ak-hero {

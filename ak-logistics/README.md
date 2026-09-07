@@ -58,8 +58,7 @@ ak-logistics/
 │   ├── js/
 │   │   └── main.js              # Navbar behavior, form validation, conversion hooks
 │   └── images/
-│       ├── logo.svg             # Official AK Logistics brand mark
-│       ├── favicon.svg          # Matching crisp brand favicon
+│       ├── logo.png             # Official circular metallic silver & royal blue emblem (Logo & Favicon)
 │       ├── hero-logistics.svg   # 3PL hero transport & hub illustration
 │       ├── truck-fleet.svg      # Freight transport illustration
 │       ├── warehouse-interior.svg # Warehousing & storage illustration
@@ -75,6 +74,32 @@ ak-logistics/
 │
 └── README.md
 ```
+
+---
+
+## 3. Brand Identity & Corporate Color System
+
+| Website Element | Corporate Colour | Hex Code / Implementation |
+|---|---|---|
+| **Navbar** | Deep Navy Blue | `#0b1c38` (`--ak-navy`) |
+| **Logo** | Blue + Silver Emblem | `assets/images/logo.png` (Circular badge) |
+| **Favicon** | Blue + Silver Emblem | `assets/images/logo.png` (`rel="icon"`) |
+| **Hero Background** | Deep Navy Blue | `#07152b` (`--ak-navy-dark`) |
+| **Hero Text** | White | `#ffffff` (`--ak-white`) |
+| **Primary Buttons** | Logistics Blue | `#0056b3` (`--ak-blue`) |
+| **Button Hover** | Deep Navy Blue | `#07152b` (`--ak-navy-dark` + silver border) |
+| **Section Headings**| Deep Navy Blue | `#0b1c38` (`--ak-navy`) |
+| **Body Text** | Charcoal | `#2d3748` (`--ak-charcoal`) |
+| **Service Cards** | White | `#ffffff` (`--ak-white`) |
+| **Card Borders** | Light Silver | `#cbd5e1` (`--ak-silver-border`) |
+| **Alternating Sections** | Light Silver | `#eef2f6` (`--ak-silver-200`) |
+| **Footer** | Deep Navy Blue | `#07152b` (`--ak-navy-dark`) |
+| **Footer Text** | White / Silver | `#ffffff` headings / `#cbd5e1` links |
+| **Icons** | Logistics Blue | `#0056b3` (`--ak-blue` / `--ak-blue-light`) |
+| **Form Focus Border** | Logistics Blue | `#0056b3` with soft blue ring |
+| **Links** | Logistics Blue | `#0056b3` (`--ak-blue`) |
+
+*Brand Rationale: Deep Navy Blue serves as the authoritative foundation, Logistics Blue powers actionable highlights and key interactive elements, and Silver provides clean, professional structural separation.*
 
 ---
 

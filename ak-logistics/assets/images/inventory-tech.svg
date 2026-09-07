@@ -14,7 +14,7 @@
     <rect x="15" y="15" width="310" height="250" rx="8" fill="#1e293b"/>
     <!-- App Header -->
     <rect x="25" y="25" width="290" height="36" rx="6" fill="#07162c"/>
-    <text x="40" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" fill="#f36b13">INVENTORY CONTROL SYSTEM</text>
+    <text x="40" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" fill="#0056b3">INVENTORY CONTROL SYSTEM</text>
     <!-- Barcode Box & Laser -->
     <g transform="translate(40, 75)">
       <rect width="120" height="70" rx="6" fill="#ffffff"/>
@@ -43,7 +43,7 @@
     <!-- Analytics Chart Placeholder -->
     <g transform="translate(40, 165)">
       <rect width="260" height="90" rx="6" fill="#0f172a"/>
-      <polyline points="20,70 60,50 100,60 140,30 180,45 220,15 240,25" fill="none" stroke="#f36b13" stroke-width="3"/>
+      <polyline points="20,70 60,50 100,60 140,30 180,45 220,15 240,25" fill="none" stroke="#0056b3" stroke-width="3"/>
       <circle cx="140" cy="30" r="4" fill="#ffffff"/>
       <circle cx="220" cy="15" r="4" fill="#ffffff"/>
       <text x="20" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="10" fill="#94a3b8">Turnover &amp; Order Fulfillment Rate</text>

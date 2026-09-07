@@ -25,11 +25,11 @@
     <path d="M 20 20 L 250 20 L 310 60 L 320 100 L 20 100 Z" fill="#ffffff"/>
     <path d="M 245 28 L 295 60 L 245 60 Z" fill="#0d2342"/>
     <!-- Side Accent & Branding -->
-    <rect x="20" y="70" width="300" height="12" fill="#f36b13"/>
+    <rect x="20" y="70" width="300" height="12" fill="#0056b3"/>
     <text x="35" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="16" fill="#0d2342">AK LOGISTICS</text>
-    <text x="35" y="66" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="8" fill="#f36b13">LAST-MILE &amp; DISTRIBUTION</text>
+    <text x="35" y="66" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="8" fill="#0056b3">LAST-MILE &amp; DISTRIBUTION</text>
     <!-- Headlight -->
-    <rect x="312" y="75" width="8" height="12" rx="2" fill="#fbbf24"/>
+    <rect x="312" y="75" width="8" height="12" rx="2" fill="#cbd5e1"/>
     <!-- Wheels -->
     <circle cx="75" cy="100" r="20" fill="#1e293b"/>
     <circle cx="75" cy="100" r="10" fill="#94a3b8"/>
