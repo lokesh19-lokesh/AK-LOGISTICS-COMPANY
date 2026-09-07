@@ -144,13 +144,7 @@ img, svg {
   position: sticky;
   top: 0;
   z-index: 1040;
-  transition: padding var(--ak-transition-base), box-shadow var(--ak-transition-base);
   border-bottom: 1px solid rgba(203, 213, 225, 0.18); /* Light silver accent */
-}
-
-.ak-navbar.scrolled {
-  padding: 6px 0;
-  box-shadow: 0 8px 24px rgba(7, 21, 43, 0.35);
 }
 
 .ak-navbar .container {
@@ -185,11 +179,6 @@ img, svg {
 
 .ak-brand:hover .ak-brand-img {
   transform: scale(1.05);
-}
-
-.ak-navbar.scrolled .ak-brand-img {
-  width: 68px;
-  height: 68px;
 }
 
 /* Nav Links on Deep Navy Navbar */

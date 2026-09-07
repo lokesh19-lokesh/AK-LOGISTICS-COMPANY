@@ -8,20 +8,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
-  // 1. Sticky Navbar Shrink Effect
-  const navbar = document.querySelector('.ak-navbar');
+  // 1. Back to Top Button Visibility
   const backToTopBtn = document.getElementById('backToTopBtn');
 
   const handleScroll = () => {
     const scrollY = window.scrollY || window.pageYOffset;
-
-    if (navbar) {
-      if (scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    }
 
     if (backToTopBtn) {
       if (scrollY > 300) {
