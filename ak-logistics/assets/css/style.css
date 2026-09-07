@@ -174,11 +174,11 @@ img, svg {
 }
 
 .ak-brand-img {
-  width: 72px;
-  height: 72px;
+  width: 92px;
+  height: 92px;
   object-fit: contain;
   border-radius: 50%;
-  filter: drop-shadow(0 3px 10px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
   transition: transform var(--ak-transition-fast), width var(--ak-transition-base), height var(--ak-transition-base);
   flex-shrink: 0;
 }
@@ -188,8 +188,8 @@ img, svg {
 }
 
 .ak-navbar.scrolled .ak-brand-img {
-  width: 58px;
-  height: 58px;
+  width: 68px;
+  height: 68px;
 }
 
 /* Nav Links on Deep Navy Navbar */
@@ -875,11 +875,11 @@ img, svg {
 }
 
 .ak-footer-brand-img {
-  width: 60px;
-  height: 60px;
+  width: 76px;
+  height: 76px;
   object-fit: contain;
   border-radius: 50%;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.5));
   flex-shrink: 0;
 }
 
@@ -1032,8 +1032,8 @@ img, svg {
   }
 
   .ak-brand-img {
-    width: 58px;
-    height: 58px;
+    width: 72px;
+    height: 72px;
   }
 
   .ak-hero {
