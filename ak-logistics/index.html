@@ -68,120 +68,165 @@
     </div>
   </div>
 
-  <!-- 2. Sticky Navbar -->
-  <nav class="navbar navbar-expand-lg ak-navbar">
-    <div class="container">
-      <a class="navbar-brand ak-brand" href="index.html" aria-label="AK Logistics Company Home">
-        <img src="assets/images/logo.png" alt="AK Logistics Company" class="ak-brand-img" width="92" height="92">
-      </a>
+  <!-- 2. Modern Curved Hero & Integrated Floating Navigation -->
+  <div class="ak-hero-frame-wrapper">
+    <div class="ak-hero-frame">
+      <!-- Background cinematic truck image with subtle gradient overlay -->
+      <div class="ak-hero-bg" id="akHeroBg" style="background-image: url('assets/images/hero-slide-1.jpg');"></div>
+      <div class="ak-hero-vignette"></div>
 
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#akNavMenu" aria-controls="akNavMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="bi bi-list fs-2 text-white"></span>
-      </button>
+      <!-- Floating Header Bar -->
+      <header class="ak-floating-navbar-container">
+        <!-- Left Pill: Navigation Links -->
+        <nav class="ak-nav-pill" aria-label="Main Navigation">
+          <ul class="ak-nav-pill-list">
+            <li class="ak-nav-pill-item"><a href="index.html" class="ak-pill-link active">Home</a></li>
+            <li class="ak-nav-pill-item"><a href="about.html" class="ak-pill-link">About Us</a></li>
+            <li class="ak-nav-pill-item dropdown">
+              <a href="services.html" class="ak-pill-link dropdown-toggle" id="heroServicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="heroServicesDropdown">
+                <li><a class="dropdown-item fw-bold text-info" href="services.html"><i class="bi bi-grid-fill"></i> All Services Overview</a></li>
+                <li><hr class="dropdown-divider my-1"></li>
+                <li><a class="dropdown-item" href="transportation.html"><i class="bi bi-truck"></i> Transportation &amp; Freight</a></li>
+                <li><a class="dropdown-item" href="warehousing.html"><i class="bi bi-building"></i> Warehousing &amp; Storage</a></li>
+                <li><a class="dropdown-item" href="inventory-management.html"><i class="bi bi-boxes"></i> Inventory Management</a></li>
+                <li><a class="dropdown-item" href="distribution.html"><i class="bi bi-geo"></i> Distribution &amp; Last-Mile</a></li>
+                <li><a class="dropdown-item" href="order-fulfillment.html"><i class="bi bi-box-arrow-up-right"></i> Order Fulfillment</a></li>
+                <li><a class="dropdown-item" href="supply-chain.html"><i class="bi bi-diagram-3"></i> Supply Chain Management</a></li>
+                <li><a class="dropdown-item" href="reverse-logistics.html"><i class="bi bi-arrow-repeat"></i> Reverse Logistics</a></li>
+                <li><a class="dropdown-item" href="logistics-consulting.html"><i class="bi bi-graph-up-arrow"></i> Logistics Consulting</a></li>
+                <li><a class="dropdown-item" href="value-added-services.html"><i class="bi bi-patch-check"></i> Value-Added Services</a></li>
+                <li><a class="dropdown-item" href="technology-logistics.html"><i class="bi bi-cpu"></i> Technology-Driven Logistics</a></li>
+              </ul>
+            </li>
+            <li class="ak-nav-pill-item"><a href="industries.html" class="ak-pill-link">Industries</a></li>
+            <li class="ak-nav-pill-item"><a href="why-choose-us.html" class="ak-pill-link">Why Choose Us</a></li>
+            <li class="ak-nav-pill-item"><a href="contact.html" class="ak-pill-link">Contact Us</a></li>
+          </ul>
+        </nav>
 
-      <div class="collapse navbar-collapse" id="akNavMenu">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Services
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-              <li><a class="dropdown-item fw-bold text-primary" href="services.html"><i class="bi bi-grid-fill"></i> All Services Overview</a></li>
-              <li><hr class="dropdown-divider my-1"></li>
-              <li><a class="dropdown-item" href="transportation.html"><i class="bi bi-truck"></i> Transportation &amp; Freight</a></li>
-              <li><a class="dropdown-item" href="warehousing.html"><i class="bi bi-building"></i> Warehousing &amp; Storage</a></li>
-              <li><a class="dropdown-item" href="inventory-management.html"><i class="bi bi-boxes"></i> Inventory Management</a></li>
-              <li><a class="dropdown-item" href="distribution.html"><i class="bi bi-geo"></i> Distribution &amp; Last-Mile</a></li>
-              <li><a class="dropdown-item" href="order-fulfillment.html"><i class="bi bi-box-arrow-up-right"></i> Order Fulfillment</a></li>
-              <li><a class="dropdown-item" href="supply-chain.html"><i class="bi bi-diagram-3"></i> Supply Chain Management</a></li>
-              <li><a class="dropdown-item" href="reverse-logistics.html"><i class="bi bi-arrow-repeat"></i> Reverse Logistics</a></li>
-              <li><a class="dropdown-item" href="logistics-consulting.html"><i class="bi bi-graph-up-arrow"></i> Logistics Consulting</a></li>
-              <li><a class="dropdown-item" href="value-added-services.html"><i class="bi bi-patch-check"></i> Value-Added Services</a></li>
-              <li><a class="dropdown-item" href="technology-logistics.html"><i class="bi bi-cpu"></i> Technology-Driven Logistics</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="industries.html">Industries</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="why-choose-us.html">Why Choose Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
-          </li>
-          <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-            <a class="btn btn-ak-quote" href="get-a-quote.html" id="navGetQuoteBtn">
-              <span>Get a Quote</span>
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- 3. Hero Section -->
-  <header class="ak-hero">
-    <div class="ak-hero-overlay"></div>
-    <div class="container ak-hero-content">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-7">
-          <div class="ak-hero-badge">
-            <i class="bi bi-shield-fill-check"></i>
-            <span>Premier 3PL Partner • Riyadh, Saudi Arabia</span>
-          </div>
-          <h1 class="ak-hero-title">Moving Your Business Forward.</h1>
-          <p class="ak-hero-subtitle">
-            Reliable, efficient, and technology-driven logistics solutions that keep your supply chain moving. From domestic parcel delivery to complete 3PL warehousing and distribution across Saudi Arabia.
-          </p>
-          <div class="d-flex flex-wrap gap-3 pt-2">
-            <a href="get-a-quote.html" class="btn btn-ak-quote btn-lg px-4 py-3" id="heroQuoteBtn">
-              <i class="bi bi-file-earmark-text"></i>
-              <span>Get a Quote</span>
-            </a>
-            <a href="services.html" class="btn btn-ak-outline btn-lg px-4 py-3" id="heroServicesBtn">
-              <span>Explore Our Services</span>
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-
-          <!-- Quick Trust Bullets -->
-          <div class="row mt-4 pt-3 border-top border-white border-opacity-10 g-3">
-            <div class="col-sm-4">
-              <div class="d-flex align-items-center gap-2 text-white">
-                <i class="bi bi-check-circle-fill text-primary fs-5"></i>
-                <span class="small fw-semibold">Riyadh Strategic Hub</span>
-              </div>
+        <!-- Center Badge: White Cutout with AK Logistics Logo -->
+        <div class="ak-nav-logo-badge">
+          <a href="index.html" class="ak-logo-link" aria-label="AK Logistics Company">
+            <img src="assets/images/logo.png" alt="AK Logistics Company" class="ak-nav-emblem" width="80" height="80">
+            <div class="ak-brand-text-wrap">
+              <span class="ak-brand-title">AK Logistics</span>
+              <span class="ak-brand-subtitle">3PL &amp; SUPPLY CHAIN</span>
             </div>
-            <div class="col-sm-4">
-              <div class="d-flex align-items-center gap-2 text-white">
-                <i class="bi bi-check-circle-fill text-primary fs-5"></i>
-                <span class="small fw-semibold">End-to-End 3PL</span>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="d-flex align-items-center gap-2 text-white">
-                <i class="bi bi-check-circle-fill text-primary fs-5"></i>
-                <span class="small fw-semibold">Real-Time Visibility</span>
+          </a>
+        </div>
+
+        <!-- Right Action Pill: Track & Contact -->
+        <div class="ak-nav-actions">
+          <a href="contact.html#tracking" class="ak-btn-pill ak-btn-pill-white">
+            <span>Tracking Package</span>
+            <span class="ak-btn-icon-circle"><i class="bi bi-arrow-up-right"></i></span>
+          </a>
+          <a href="get-a-quote.html" class="ak-btn-pill ak-btn-pill-red" id="heroGetQuoteTop">
+            <span>Get in touch with us</span>
+            <span class="ak-btn-icon-circle"><i class="bi bi-arrow-up-right"></i></span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="ak-mobile-nav-toggle d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#akMobileOffcanvas" aria-controls="akMobileOffcanvas" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+      </header>
+
+      <!-- Hero Main Content Area -->
+      <div class="ak-hero-body">
+        <div class="container-fluid px-lg-5">
+          <div class="row">
+            <div class="col-xl-6 col-lg-7">
+              <div class="ak-hero-headline-wrap">
+                <h1 class="ak-hero-cinematic-title">
+                  Smarter Transport. Faster Deliveries. Nationwide Reach.
+                </h1>
+                <p class="ak-hero-cinematic-desc">
+                  Experience technology-driven transport solutions built for speed, safety, and efficiency — from freight and logistics to last-mile delivery.
+                </p>
+                <div class="ak-hero-cta-group">
+                  <a href="services.html" class="ak-btn-hero-white">
+                    <span>See How It Works</span>
+                    <span class="ak-btn-icon-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </a>
+                  <a href="get-a-quote.html" class="ak-btn-hero-outline">
+                    <span>Request a Quote</span>
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="col-lg-5">
-          <div class="ak-hero-visual">
-            <img src="assets/images/hero-logistics.svg" alt="AK Logistics Company Freight Transportation and Supply Chain Operations" width="800" height="500" class="img-fluid rounded-4 shadow-lg">
+      <!-- Hero Bottom Stats Bar (Left Aligned) -->
+      <div class="ak-hero-stats-bottom">
+        <div class="container-fluid px-lg-5">
+          <div class="ak-stats-inline-grid">
+            <div class="ak-stat-item">
+              <h3 class="ak-stat-number">25+</h3>
+              <p class="ak-stat-label">Years of Logistics<br>Expertise</p>
+            </div>
+            <div class="ak-stat-item">
+              <h3 class="ak-stat-number">1.2M+</h3>
+              <p class="ak-stat-label">Successful<br>Deliveries</p>
+            </div>
+            <div class="ak-stat-item">
+              <h3 class="ak-stat-number">180+</h3>
+              <p class="ak-stat-label">Global Shipping<br>Destinations</p>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Bottom Right Curved Cutout Control Badge -->
+      <div class="ak-hero-bottom-cutout">
+        <div class="ak-slider-controls">
+          <button class="ak-slider-btn ak-prev-btn" aria-label="Previous Slide">
+            <i class="bi bi-arrow-left"></i>
+          </button>
+          <button class="ak-slider-btn ak-next-btn" aria-label="Next Slide">
+            <i class="bi bi-arrow-right"></i>
+          </button>
+          <div class="ak-slider-progress">
+            <span class="ak-slider-bar-active"></span>
+          </div>
+          <span class="ak-slider-counter">01</span>
+        </div>
+      </div>
     </div>
-  </header>
+  </div>
+
+  <!-- Offcanvas Mobile Menu -->
+  <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="akMobileOffcanvas" aria-labelledby="akMobileOffcanvasLabel">
+    <div class="offcanvas-header border-bottom border-secondary">
+      <div class="d-flex align-items-center gap-2">
+        <img src="assets/images/logo.png" alt="AK Logistics" width="50" height="50" class="rounded-circle">
+        <div>
+          <h5 class="offcanvas-title text-white mb-0" id="akMobileOffcanvasLabel">AK Logistics</h5>
+          <small class="text-white-50">3PL &amp; Supply Chain</small>
+        </div>
+      </div>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav mb-4">
+        <li class="nav-item"><a class="nav-link text-white py-2" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50 py-2" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50 py-2" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50 py-2" href="industries.html">Industries</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50 py-2" href="why-choose-us.html">Why Choose Us</a></li>
+        <li class="nav-item"><a class="nav-link text-white-50 py-2" href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="d-grid gap-2">
+        <a href="get-a-quote.html" class="btn btn-danger py-2 fw-bold">Get in touch with us <i class="bi bi-arrow-up-right ms-1"></i></a>
+        <a href="tel:+966550208079" class="btn btn-outline-light py-2"><i class="bi bi-telephone me-2"></i>+966 550 208 079</a>
+      </div>
+    </div>
+  </div>
 
   <!-- 4. Section 1: Who We Are -->
   <section class="section-padding bg-white" id="who-we-are">

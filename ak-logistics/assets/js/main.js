@@ -210,4 +210,108 @@ document.addEventListener('DOMContentLoaded', () => {
       console.info('[AK Logistics Tracking Placeholder] Conversion ready for tag:', conversionTag, metadata);
     }
   }
+
+  // 9. Hero Section Slider Controls
+  const heroPrevBtn = document.querySelector('.ak-prev-btn');
+  const heroNextBtn = document.querySelector('.ak-next-btn');
+  const heroCounter = document.querySelector('.ak-slider-counter');
+  const heroProgressBar = document.querySelector('.ak-slider-bar-active');
+  const heroTitle = document.querySelector('.ak-hero-cinematic-title');
+  const heroDesc = document.querySelector('.ak-hero-cinematic-desc');
+  const heroBg = document.getElementById('akHeroBg');
+
+  if (heroPrevBtn && heroNextBtn && heroCounter) {
+    const slides = [
+      {
+        title: "Smarter Transport. Faster Deliveries. Nationwide Reach.",
+        desc: "Experience technology-driven transport solutions built for speed, safety, and efficiency — from freight and logistics to last-mile delivery.",
+        counter: "01",
+        progress: "33%",
+        image: "assets/images/hero-slide-1.jpg"
+      },
+      {
+        title: "Strategic Warehousing & Temperature-Controlled Storage.",
+        desc: "Secure, state-of-the-art storage facilities in Riyadh equipped with advanced WMS, 24/7 security, and flexible pallet racking.",
+        counter: "02",
+        progress: "66%",
+        image: "assets/images/hero-slide-2.jpg"
+      },
+      {
+        title: "End-to-End 3PL & Scalable Supply Chain Management.",
+        desc: "Connecting businesses across Saudi Arabia with optimized distribution networks, real-time tracking, and verified SLA delivery standards.",
+        counter: "03",
+        progress: "100%",
+        image: "assets/images/hero-slide-3.jpg"
+      }
+    ];
+
+    let currentSlide = 0;
+
+    const updateSlide = (index) => {
+      currentSlide = (index + slides.length) % slides.length;
+      const slide = slides[currentSlide];
+
+      // Fade transition for background image
+      if (heroBg && slide.image) {
+        heroBg.style.transition = 'opacity 0.4s ease';
+        heroBg.style.opacity = '0.3';
+        setTimeout(() => {
+          heroBg.style.backgroundImage = `url('${slide.image}')`;
+          heroBg.style.opacity = '1';
+        }, 200);
+      }
+      
+      if (heroTitle) {
+        heroTitle.style.opacity = '0';
+        heroTitle.style.transform = 'translateY(8px)';
+        setTimeout(() => {
+          heroTitle.textContent = slide.title;
+          heroTitle.style.transition = 'all 0.35s ease';
+          heroTitle.style.opacity = '1';
+          heroTitle.style.transform = 'translateY(0)';
+        }, 150);
+      }
+
+      if (heroDesc) {
+        heroDesc.style.opacity = '0';
+        setTimeout(() => {
+          heroDesc.textContent = slide.desc;
+          heroDesc.style.transition = 'all 0.35s ease';
+          heroDesc.style.opacity = '1';
+        }, 150);
+      }
+
+      if (heroCounter) heroCounter.textContent = slide.counter;
+      if (heroProgressBar) heroProgressBar.style.width = slide.progress;
+    };
+
+    heroNextBtn.addEventListener('click', () => {
+      updateSlide(currentSlide + 1);
+      resetAutoSlide();
+    });
+    
+    heroPrevBtn.addEventListener('click', () => {
+      updateSlide(currentSlide - 1);
+      resetAutoSlide();
+    });
+
+    // 4-Second Automatic Sliding Timer
+    let slideInterval = setInterval(() => {
+      updateSlide(currentSlide + 1);
+    }, 4000);
+
+    const resetAutoSlide = () => {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(() => {
+        updateSlide(currentSlide + 1);
+      }, 4000);
+    };
+
+    // Pause on hover over hero frame so user can read comfortably
+    const heroFrame = document.querySelector('.ak-hero-frame');
+    if (heroFrame) {
+      heroFrame.addEventListener('mouseenter', () => clearInterval(slideInterval));
+      heroFrame.addEventListener('mouseleave', () => resetAutoSlide());
+    }
+  }
 });

@@ -311,76 +311,562 @@ img, svg {
 }
 
 /* --------------------------------------------------------------------------
-   6. Hero Sections (Deep Navy Blue Background, White Text)
+   6. Hero Sections (Modern Curved Frame & Floating Navigation Overlay)
    -------------------------------------------------------------------------- */
-.ak-hero {
+.ak-hero-frame-wrapper {
+  background-color: #ffffff;
+  padding: 16px 20px 24px;
   position: relative;
-  background-color: var(--ak-navy-dark); /* Hero background: Deep Navy Blue */
-  color: var(--ak-white);                /* Hero text: White */
-  padding: 90px 0 80px;
   overflow: hidden;
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(19, 43, 80, 0.6) 0%, transparent 45%),
-    radial-gradient(circle at 90% 80%, rgba(0, 86, 179, 0.15) 0%, transparent 45%);
 }
 
-.ak-hero-overlay {
+@media (max-width: 768px) {
+  .ak-hero-frame-wrapper {
+    padding: 8px 8px 16px;
+  }
+}
+
+.ak-hero-frame {
+  position: relative;
+  border-radius: 40px;
+  min-height: 720px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 991px) {
+  .ak-hero-frame {
+    border-radius: 28px;
+    min-height: auto;
+  }
+}
+
+/* Background image & gradient overlay */
+.ak-hero-bg {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(7, 21, 43, 0.96) 0%, rgba(11, 28, 56, 0.9) 100%);
+  width: 100%;
+  height: 100%;
+  background-position: center right;
+  background-size: cover;
+  background-repeat: no-repeat;
   z-index: 1;
+  transform: scale(1.02);
+  transition: transform 10s ease;
 }
 
-.ak-hero-content {
-  position: relative;
+.ak-hero-vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(8, 17, 27, 0.94) 0%, rgba(10, 24, 38, 0.78) 46%, rgba(10, 24, 38, 0.25) 75%, rgba(10, 24, 38, 0.1) 100%),
+              linear-gradient(180deg, rgba(7, 18, 30, 0.5) 0%, transparent 40%, rgba(7, 18, 30, 0.75) 100%);
   z-index: 2;
 }
 
-.ak-hero-badge {
+/* Floating Navbar Container */
+.ak-floating-navbar-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px 0;
+  gap: 15px;
+}
+
+@media (max-width: 991px) {
+  .ak-floating-navbar-container {
+    padding: 12px 16px;
+  }
+}
+
+/* 1. Left Nav Pill */
+.ak-nav-pill {
+  background: rgba(30, 39, 46, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 991px) {
+  .ak-nav-pill {
+    display: none;
+  }
+}
+
+.ak-nav-pill-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 4px;
+}
+
+.ak-pill-link {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 50px;
+  transition: all var(--ak-transition-fast);
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background-color: rgba(0, 86, 179, 0.25);
-  color: #cbe0fc; /* Silver/ice blue highlight */
-  border: 1px solid rgba(203, 213, 225, 0.35); /* Silver accent border */
-  padding: 6px 14px;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 20px;
+  white-space: nowrap;
 }
 
-.ak-hero-title {
-  color: var(--ak-white); /* Hero text: White */
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
+.ak-pill-link:hover,
+.ak-pill-link:focus {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.ak-pill-link.active {
+  background: linear-gradient(135deg, #e5252a 0%, #c41c21 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(229, 37, 42, 0.4);
+}
+
+/* 2. Center Cutout Logo Badge */
+.ak-nav-logo-badge {
+  background: #ffffff;
+  padding: 10px 24px;
+  border-radius: 0 0 28px 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -16px;
+  transition: transform 0.3s ease;
+}
+
+.ak-nav-logo-badge:hover {
+  transform: translateY(2px);
+}
+
+.ak-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.ak-nav-emblem {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
+}
+
+.ak-brand-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.ak-brand-title {
+  font-size: 1.25rem;
   font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
-  margin-bottom: 20px;
+  color: #0b1c36;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
-.ak-hero-subtitle {
-  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.9); /* Hero text: White */
-  max-width: 600px;
-  line-height: 1.6;
-  margin-bottom: 30px;
+.ak-brand-subtitle {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #e5252a;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
 }
 
-.ak-hero-visual {
+/* 3. Right Action Buttons */
+.ak-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 991px) {
+  .ak-nav-actions {
+    display: none;
+  }
+}
+
+.ak-btn-pill {
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 6px 6px 6px 18px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all var(--ak-transition-fast);
+  white-space: nowrap;
+}
+
+.ak-btn-icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  transition: transform var(--ak-transition-fast);
+}
+
+.ak-btn-pill:hover .ak-btn-icon-circle {
+  transform: rotate(45deg);
+}
+
+/* White Pill Button */
+.ak-btn-pill-white {
+  background: #ffffff;
+  color: #111827;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.ak-btn-pill-white .ak-btn-icon-circle {
+  background: #111827;
+  color: #ffffff;
+}
+
+.ak-btn-pill-white:hover {
+  background: #f3f4f6;
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+/* Red Pill Button */
+.ak-btn-pill-red {
+  background: linear-gradient(135deg, #e5252a 0%, #d11e23 100%);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(229, 37, 42, 0.4);
+}
+
+.ak-btn-pill-red .ak-btn-icon-circle {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.ak-btn-pill-red:hover {
+  background: linear-gradient(135deg, #cf1b20 0%, #b31419 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(229, 37, 42, 0.5);
+}
+
+/* Mobile Nav Toggle */
+.ak-mobile-nav-toggle {
+  background: rgba(30, 39, 46, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 4px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero Body & Headline */
+.ak-hero-body {
   position: relative;
-  z-index: 2;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  border: 1px solid var(--ak-silver-300); /* Silver border */
+  z-index: 5;
+  padding: 60px 0 40px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
+.ak-hero-headline-wrap {
+  max-width: 680px;
+}
+
+.ak-hero-cinematic-title {
+  color: #ffffff;
+  font-size: clamp(2.2rem, 4.2vw, 4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  min-height: 2.3em; /* Locks title height so hero never shrinks or jumps when slide changes */
+  display: flex;
+  align-items: flex-start;
+}
+
+.ak-hero-cinematic-desc {
+  color: rgba(243, 244, 246, 0.92);
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+  line-height: 1.6;
+  max-width: 580px;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  min-height: 4.8em; /* Locks description height so hero never shrinks or jumps when slide changes */
+}
+
+.ak-hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ak-btn-hero-white {
+  background: #ffffff;
+  color: #111827;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.98rem;
+  padding: 8px 10px 8px 24px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all var(--ak-transition-base);
+}
+
+.ak-btn-hero-white .ak-btn-icon-circle {
+  background: #111827;
+  color: #ffffff;
+  width: 38px;
+  height: 38px;
+  font-size: 0.95rem;
+}
+
+.ak-btn-hero-white:hover {
+  background: #f9fafb;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.ak-btn-hero-white:hover .ak-btn-icon-circle {
+  transform: rotate(45deg);
+}
+
+.ak-btn-hero-outline {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 13px 26px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all var(--ak-transition-base);
+}
+
+.ak-btn-hero-outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Bottom Stats Bar (Left Aligned) */
+.ak-hero-stats-bottom {
+  position: relative;
+  z-index: 5;
+  padding-bottom: 35px;
+}
+
+.ak-stats-inline-grid {
+  display: flex;
+  align-items: flex-end;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.ak-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.ak-stat-number {
+  color: #ffffff;
+  font-size: clamp(2rem, 3.2vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.ak-stat-label {
+  color: rgba(209, 213, 219, 0.88);
+  font-size: 0.88rem;
+  line-height: 1.35;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Bottom Right Curved Cutout Control Badge */
+.ak-hero-bottom-cutout {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  background: #ffffff;
+  padding: 16px 32px 16px 26px;
+  border-radius: 36px 0 0 0;
+  box-shadow: -6px -6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive Overhauls for Mobile & Tablet */
+@media (max-width: 991px) {
+  .ak-floating-navbar-container {
+    padding: 10px 14px 0;
+    align-items: center;
+  }
+  .ak-nav-logo-badge {
+    margin-top: 0;
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+  .ak-nav-emblem {
+    width: 42px;
+    height: 42px;
+  }
+  .ak-brand-title {
+    font-size: 1.05rem;
+  }
+  .ak-brand-subtitle {
+    font-size: 0.58rem;
+  }
+  .ak-hero-body {
+    padding: 40px 0 24px;
+  }
+  .ak-hero-cinematic-title {
+    min-height: auto;
+  }
+  .ak-hero-cinematic-desc {
+    min-height: auto;
+  }
+  .ak-hero-stats-bottom {
+    padding-bottom: 20px;
+  }
+  .ak-stats-inline-grid {
+    gap: 24px;
+  }
+  .ak-stat-number {
+    font-size: 2rem;
+  }
+  .ak-hero-bottom-cutout {
+    position: relative;
+    border-radius: 24px;
+    margin: 10px auto 16px;
+    display: inline-flex;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ak-hero-frame {
+    border-radius: 22px;
+  }
+  .ak-hero-frame-wrapper {
+    padding: 6px 6px 14px;
+  }
+  .ak-hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ak-btn-hero-white,
+  .ak-btn-hero-outline {
+    justify-content: center;
+    width: 100%;
+  }
+  .ak-stats-inline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .ak-stat-number {
+    font-size: 1.6rem;
+  }
+  .ak-stat-label {
+    font-size: 0.75rem;
+  }
+}
+
+.ak-slider-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ak-slider-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #111827;
+  color: #ffffff;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all var(--ak-transition-fast);
+}
+
+.ak-slider-btn:hover {
+  background: #e5252a;
+  transform: scale(1.08);
+}
+
+.ak-slider-progress {
+  width: 90px;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 8px;
+}
+
+.ak-slider-bar-active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: #e5252a;
+  border-radius: 4px;
+}
+
+.ak-slider-counter {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.03em;
+  font-family: var(--ak-font-sans);
+}
+
+/* Fallback / Inner Pages Hero */
 .ak-hero-inner {
   position: relative;
   background-color: var(--ak-navy-dark); /* Deep Navy Blue */
