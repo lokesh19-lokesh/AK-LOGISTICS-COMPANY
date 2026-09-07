@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#142c4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="380" rx="14" fill="url(#mapGrad)"/>
+
+  <!-- Saudi Arabia Outline Simplified Geometric Vector -->
+  <g fill="#162e50" stroke="#2c4d75" stroke-width="2">
+    <polygon points="120,80 260,40 400,60 520,150 490,280 340,340 180,310 110,210 120,80"/>
+  </g>
+
+  <!-- Major Distribution Arteries from Riyadh Central Hub -->
+  <!-- Riyadh Coordinates approx 310, 180 -->
+  <g stroke="#f36b13" stroke-width="2.5" stroke-dasharray="6,4">
+    <!-- To Eastern Province (Dammam / Khobar) -->
+    <line x1="310" y1="180" x2="430" y2="150"/>
+    <!-- To Western Province (Jeddah / Makkah / Madinah) -->
+    <line x1="310" y1="180" x2="170" y2="210"/>
+    <!-- To Northern Region (Qassim / Hail / Tabuk) -->
+    <line x1="310" y1="180" x2="230" y2="90"/>
+    <!-- To Southern Region (Abha / Jazan) -->
+    <line x1="310" y1="180" x2="240" y2="290"/>
+  </g>
+
+  <!-- Network Hub Points -->
+  <!-- Dammam -->
+  <circle cx="430" cy="150" r="5" fill="#38bdf8"/>
+  <text x="442" y="154" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#cbd5e1">Eastern Province</text>
+  <!-- Jeddah -->
+  <circle cx="170" cy="210" r="5" fill="#38bdf8"/>
+  <text x="80" y="214" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#cbd5e1">Western Province</text>
+  <!-- Northern -->
+  <circle cx="230" cy="90" r="5" fill="#38bdf8"/>
+  <text x="170" y="78" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#cbd5e1">Central &amp; North</text>
+  <!-- Southern -->
+  <circle cx="240" cy="290" r="5" fill="#38bdf8"/>
+  <text x="170" y="310" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#cbd5e1">Southern Region</text>
+
+  <!-- Riyadh HQ Beacon -->
+  <circle cx="310" cy="180" r="28" fill="#f36b13" opacity="0.25"/>
+  <circle cx="310" cy="180" r="18" fill="#f36b13" opacity="0.5"/>
+  <circle cx="310" cy="180" r="10" fill="#ffffff" stroke="#f36b13" stroke-width="4"/>
+  
+  <g transform="translate(230, 115)">
+    <rect width="160" height="42" rx="6" fill="#07162c" stroke="#f36b13" stroke-width="1.5"/>
+    <text x="80" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="11" fill="#ffffff" text-anchor="middle">RIYADH HEADQUARTERS</text>
+    <text x="80" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="9" fill="#f36b13" text-anchor="middle">AK Logistics Hub</text>
+  </g>
+</svg>

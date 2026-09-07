@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07162c"/>
+      <stop offset="100%" stop-color="#163056"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="380" rx="14" fill="url(#cGrad)"/>
+
+  <!-- Consulting Blueprint Graphic -->
+  <g transform="translate(100, 60)">
+    <rect width="400" height="240" rx="10" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+    <!-- Grid on Blueprint -->
+    <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
+      <line x1="50" y1="0" x2="50" y2="240"/>
+      <line x1="100" y1="0" x2="100" y2="240"/>
+      <line x1="150" y1="0" x2="150" y2="240"/>
+      <line x1="200" y1="0" x2="200" y2="240"/>
+      <line x1="250" y1="0" x2="250" y2="240"/>
+      <line x1="300" y1="0" x2="300" y2="240"/>
+      <line x1="350" y1="0" x2="350" y2="240"/>
+      <line x1="0" y1="60" x2="400" y2="60"/>
+      <line x1="0" y1="120" x2="400" y2="120"/>
+      <line x1="0" y1="180" x2="400" y2="180"/>
+    </g>
+
+    <!-- Strategy Graph -->
+    <path d="M 40 190 Q 140 160 220 90 T 360 40" fill="none" stroke="#f36b13" stroke-width="4"/>
+    <circle cx="40" cy="190" r="6" fill="#f36b13"/>
+    <circle cx="220" cy="90" r="6" fill="#f36b13"/>
+    <circle cx="360" cy="40" r="7" fill="#ffffff" stroke="#f36b13" stroke-width="3"/>
+
+    <!-- Warehouse Floorplan Optimization Block -->
+    <rect x="60" y="50" width="100" height="80" rx="4" fill="rgba(56,189,248,0.15)" stroke="#38bdf8" stroke-dasharray="4,4"/>
+    <text x="110" y="95" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="11" fill="#38bdf8" text-anchor="middle">Facility Layout</text>
+
+    <!-- KPI Metric Box -->
+    <g transform="translate(250, 130)">
+      <rect width="120" height="60" rx="6" fill="#1e293b" stroke="#475569"/>
+      <text x="14" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="10" fill="#94a3b8">EFFICIENCY GAIN</text>
+      <text x="14" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="18" fill="#10b981">+32%</text>
+    </g>
+  </g>
+  <text x="300" y="340" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="12" fill="#cbd5e1" text-anchor="middle">Logistics Audit • Warehouse Setup • Process Re-Engineering</text>
+</svg>

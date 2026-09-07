@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="scGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#122a4d"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="380" rx="14" fill="url(#scGrad)"/>
+
+  <!-- Connected Supply Chain Nodes -->
+  <!-- Connecting curved flow lines -->
+  <path d="M 100 190 C 180 120, 240 120, 300 190 C 360 260, 420 260, 500 190" fill="none" stroke="#f36b13" stroke-width="4" stroke-dasharray="8,6"/>
+
+  <!-- Node 1: Procurement / Suppliers -->
+  <g transform="translate(60, 150)">
+    <circle cx="40" cy="40" r="36" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+    <text x="40" y="37" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="11" fill="#ffffff" text-anchor="middle">SUPPLIERS</text>
+    <text x="40" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="9" fill="#94a3b8" text-anchor="middle">Sourcing</text>
+  </g>
+
+  <!-- Node 2: Central 3PL Hub / Warehouse -->
+  <g transform="translate(260, 150)">
+    <circle cx="40" cy="40" r="44" fill="#f36b13" stroke="#ffffff" stroke-width="4"/>
+    <text x="40" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle">AK 3PL HUB</text>
+    <text x="40" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9.5" fill="#07162c" text-anchor="middle">Riyadh, KSA</text>
+  </g>
+
+  <!-- Node 3: Distribution & End Customers -->
+  <g transform="translate(460, 150)">
+    <circle cx="40" cy="40" r="36" fill="#1e293b" stroke="#10b981" stroke-width="3"/>
+    <text x="40" y="37" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="11" fill="#ffffff" text-anchor="middle">END MARKET</text>
+    <text x="40" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="9" fill="#94a3b8" text-anchor="middle">Businesses</text>
+  </g>
+
+  <!-- Key Value Points -->
+  <g transform="translate(100, 290)">
+    <rect width="400" height="46" rx="8" fill="rgba(255,255,255,0.08)"/>
+    <text x="200" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="12" fill="#cbd5e1" text-anchor="middle">End-to-End Planning • Procurement Support • Demand Optimization</text>
+  </g>
+</svg>

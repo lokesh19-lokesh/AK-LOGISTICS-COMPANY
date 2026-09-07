@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07162c"/>
+      <stop offset="100%" stop-color="#112b4e"/>
+    </linearGradient>
+    <linearGradient id="truckGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f36b13"/>
+      <stop offset="100%" stop-color="#ff8c3b"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.15)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.03)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="500" rx="16" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Logistics Grid & Route Vectors -->
+  <g stroke="rgba(255,255,255,0.06)" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="500" y1="0" x2="500" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="700" y1="0" x2="700" y2="500"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+  </g>
+
+  <!-- Route Line -->
+  <path d="M 80 380 Q 260 220 440 290 T 720 180" fill="none" stroke="#f36b13" stroke-width="3" stroke-dasharray="6,6" opacity="0.8"/>
+  <circle cx="80" cy="380" r="7" fill="#ffffff" stroke="#f36b13" stroke-width="3"/>
+  <circle cx="440" cy="290" r="8" fill="#f36b13"/>
+  <circle cx="720" cy="180" r="9" fill="#ffffff" stroke="#f36b13" stroke-width="4"/>
+
+  <!-- Warehouse Facility Silhouette -->
+  <g opacity="0.35" transform="translate(420, 110)">
+    <polygon points="0,90 120,40 240,90 240,240 0,240" fill="#1b3b68"/>
+    <polygon points="120,40 260,90 260,240 120,240" fill="#132e54"/>
+    <rect x="30" y="160" width="40" height="80" fill="#0b1b33"/>
+    <rect x="90" y="160" width="40" height="80" fill="#0b1b33"/>
+    <rect x="150" y="160" width="40" height="80" fill="#0b1b33"/>
+  </g>
+
+  <!-- Modern Freight Truck Vector -->
+  <g transform="translate(140, 240)">
+    <!-- Shadow -->
+    <ellipse cx="260" cy="165" rx="250" ry="16" fill="rgba(0,0,0,0.5)"/>
+
+    <!-- Trailer Body -->
+    <rect x="30" y="20" width="340" height="120" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+    <rect x="30" y="115" width="340" height="25" fill="#e2e8f0"/>
+    <!-- Trailer Branding -->
+    <rect x="50" y="38" width="6" height="60" fill="#f36b13"/>
+    <text x="70" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="20" fill="#0d2342">AK LOGISTICS</text>
+    <text x="70" y="85" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10" fill="#f36b13" letter-spacing="1.5">3PL FREIGHT &amp; SUPPLY CHAIN</text>
+    
+    <!-- Truck Cab -->
+    <path d="M 370 50 L 440 50 L 485 95 L 490 140 L 370 140 Z" fill="url(#truckGrad)"/>
+    <!-- Cab Window -->
+    <path d="M 390 60 L 435 60 L 468 95 L 390 95 Z" fill="#0d2342"/>
+    <!-- Cab Door Line & Handle -->
+    <line x1="425" y1="65" x2="425" y2="135" stroke="#d85705" stroke-width="2"/>
+    <rect x="410" y="105" width="10" height="3" rx="1" fill="#ffffff"/>
+    <!-- Headlight -->
+    <polygon points="485,118 495,123 490,132 482,130" fill="#ffffff"/>
+    <polygon points="495,123 560,110 560,145 490,132" fill="rgba(255,255,255,0.15)"/>
+    <!-- Front Bumper -->
+    <rect x="475" y="132" width="20" height="12" rx="2" fill="#334155"/>
+
+    <!-- Wheels -->
+    <g transform="translate(80, 140)">
+      <circle cx="0" cy="0" r="22" fill="#1e293b"/>
+      <circle cx="0" cy="0" r="12" fill="#94a3b8"/>
+      <circle cx="0" cy="0" r="5" fill="#475569"/>
+    </g>
+    <g transform="translate(135, 140)">
+      <circle cx="0" cy="0" r="22" fill="#1e293b"/>
+      <circle cx="0" cy="0" r="12" fill="#94a3b8"/>
+      <circle cx="0" cy="0" r="5" fill="#475569"/>
+    </g>
+    <g transform="translate(320, 140)">
+      <circle cx="0" cy="0" r="22" fill="#1e293b"/>
+      <circle cx="0" cy="0" r="12" fill="#94a3b8"/>
+      <circle cx="0" cy="0" r="5" fill="#475569"/>
+    </g>
+    <g transform="translate(450, 140)">
+      <circle cx="0" cy="0" r="22" fill="#1e293b"/>
+      <circle cx="0" cy="0" r="12" fill="#94a3b8"/>
+      <circle cx="0" cy="0" r="5" fill="#475569"/>
+    </g>
+  </g>
+
+  <!-- Floating Stats Card 1: 3PL Solutions -->
+  <g transform="translate(60, 60)">
+    <rect width="210" height="75" rx="12" fill="url(#glassGrad)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <circle cx="35" cy="37" r="18" fill="#f36b13"/>
+    <path d="M 28 37 L 33 42 L 43 32" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="64" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="13" fill="#ffffff">Riyadh Hub, KSA</text>
+    <text x="64" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="11" fill="rgba(255,255,255,0.75)">Kingdom-Wide Coverage</text>
+  </g>
+
+  <!-- Floating Stats Card 2: Live Supply Chain -->
+  <g transform="translate(540, 320)">
+    <rect width="210" height="75" rx="12" fill="url(#glassGrad)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+    <circle cx="35" cy="37" r="18" fill="#163663"/>
+    <circle cx="35" cy="37" r="7" fill="#f36b13"/>
+    <text x="64" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="13" fill="#ffffff">Smart Telematics</text>
+    <text x="64" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="11" fill="rgba(255,255,255,0.75)">Real-Time Tracking &amp; TMS</text>
+  </g>
+</svg>

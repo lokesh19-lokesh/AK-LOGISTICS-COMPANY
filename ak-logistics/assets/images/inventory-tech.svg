@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="invGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07162c"/>
+      <stop offset="100%" stop-color="#112948"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="380" rx="14" fill="url(#invGrad)"/>
+  
+  <!-- Digital Tablet / Scanner Interface -->
+  <g transform="translate(130, 40)">
+    <rect width="340" height="280" rx="16" fill="#0f172a" stroke="#334155" stroke-width="4"/>
+    <!-- Screen -->
+    <rect x="15" y="15" width="310" height="250" rx="8" fill="#1e293b"/>
+    <!-- App Header -->
+    <rect x="25" y="25" width="290" height="36" rx="6" fill="#07162c"/>
+    <text x="40" y="48" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" fill="#f36b13">INVENTORY CONTROL SYSTEM</text>
+    <!-- Barcode Box & Laser -->
+    <g transform="translate(40, 75)">
+      <rect width="120" height="70" rx="6" fill="#ffffff"/>
+      <!-- Barcode lines -->
+      <line x1="15" y1="15" x2="15" y2="55" stroke="#000000" stroke-width="3"/>
+      <line x1="25" y1="15" x2="25" y2="55" stroke="#000000" stroke-width="2"/>
+      <line x1="32" y1="15" x2="32" y2="55" stroke="#000000" stroke-width="4"/>
+      <line x1="45" y1="15" x2="45" y2="55" stroke="#000000" stroke-width="2"/>
+      <line x1="55" y1="15" x2="55" y2="55" stroke="#000000" stroke-width="5"/>
+      <line x1="70" y1="15" x2="70" y2="55" stroke="#000000" stroke-width="2"/>
+      <line x1="80" y1="15" x2="80" y2="55" stroke="#000000" stroke-width="3"/>
+      <line x1="95" y1="15" x2="95" y2="55" stroke="#000000" stroke-width="4"/>
+      <line x1="105" y1="15" x2="105" y2="55" stroke="#000000" stroke-width="2"/>
+      <!-- Laser scan line -->
+      <line x1="5" y1="35" x2="115" y2="35" stroke="#ef4444" stroke-width="2"/>
+    </g>
+
+    <!-- Metrics Column -->
+    <g transform="translate(180, 75)">
+      <rect width="135" height="32" rx="4" fill="#334155"/>
+      <text x="12" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#cbd5e1">Stock: 99.8% Accurate</text>
+      <rect y="40" width="135" height="32" rx="4" fill="#334155"/>
+      <text x="12" y="61" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#38bdf8">Real-Time Sync: Active</text>
+    </g>
+
+    <!-- Analytics Chart Placeholder -->
+    <g transform="translate(40, 165)">
+      <rect width="260" height="90" rx="6" fill="#0f172a"/>
+      <polyline points="20,70 60,50 100,60 140,30 180,45 220,15 240,25" fill="none" stroke="#f36b13" stroke-width="3"/>
+      <circle cx="140" cy="30" r="4" fill="#ffffff"/>
+      <circle cx="220" cy="15" r="4" fill="#ffffff"/>
+      <text x="20" y="25" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="10" fill="#94a3b8">Turnover &amp; Order Fulfillment Rate</text>
+    </g>
+  </g>
+</svg>

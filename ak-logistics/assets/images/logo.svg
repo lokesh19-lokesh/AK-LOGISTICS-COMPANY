@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 70" width="340" height="70">
+  <defs>
+    <linearGradient id="akGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07162c" />
+      <stop offset="100%" stop-color="#163663" />
+    </linearGradient>
+    <linearGradient id="akOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff8533" />
+      <stop offset="100%" stop-color="#d85705" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon Mark -->
+  <g transform="translate(4, 5)">
+    <rect x="0" y="0" width="58" height="58" rx="14" fill="url(#akGrad)" />
+    <!-- Dynamic Forward 3PL Arrows -->
+    <path d="M14 36 L24 22 L34 36" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M26 44 L36 30 L46 44" fill="none" stroke="url(#akOrange)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Speed Lines -->
+    <circle cx="20" cy="18" r="2.5" fill="#f36b13" />
+    <circle cx="40" cy="20" r="2.5" fill="#ffffff" />
+  </g>
+
+  <!-- Typography -->
+  <text x="76" y="36" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-weight="900" font-size="24" fill="#0d2342" letter-spacing="-0.5">AK LOGISTICS</text>
+  <text x="77" y="52" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-weight="700" font-size="10.5" fill="#f36b13" letter-spacing="2.2">3PL &amp; SUPPLY CHAIN SOLUTIONS</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="lmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#193b66"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="380" rx="14" fill="url(#lmGrad)"/>
+
+  <!-- City Silhouette -->
+  <g fill="#132742" opacity="0.6">
+    <rect x="40" y="140" width="60" height="180"/>
+    <rect x="120" y="110" width="80" height="210"/>
+    <rect x="220" y="80" width="70" height="240"/>
+    <rect x="310" y="130" width="60" height="190"/>
+    <rect x="390" y="100" width="90" height="220"/>
+    <rect x="500" y="150" width="60" height="170"/>
+  </g>
+
+  <!-- Delivery Van Vector -->
+  <g transform="translate(130, 180)">
+    <!-- Shadow -->
+    <ellipse cx="180" cy="110" ry="10" rx="170" fill="rgba(0,0,0,0.4)"/>
+    <!-- Van Body -->
+    <path d="M 20 20 L 250 20 L 310 60 L 320 100 L 20 100 Z" fill="#ffffff"/>
+    <path d="M 245 28 L 295 60 L 245 60 Z" fill="#0d2342"/>
+    <!-- Side Accent & Branding -->
+    <rect x="20" y="70" width="300" height="12" fill="#f36b13"/>
+    <text x="35" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="16" fill="#0d2342">AK LOGISTICS</text>
+    <text x="35" y="66" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="8" fill="#f36b13">LAST-MILE &amp; DISTRIBUTION</text>
+    <!-- Headlight -->
+    <rect x="312" y="75" width="8" height="12" rx="2" fill="#fbbf24"/>
+    <!-- Wheels -->
+    <circle cx="75" cy="100" r="20" fill="#1e293b"/>
+    <circle cx="75" cy="100" r="10" fill="#94a3b8"/>
+    <circle cx="265" cy="100" r="20" fill="#1e293b"/>
+    <circle cx="265" cy="100" r="10" fill="#94a3b8"/>
+  </g>
+
+  <!-- Proof of Delivery Badge -->
+  <g transform="translate(360, 40)">
+    <rect width="200" height="60" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    <circle cx="30" cy="30" r="14" fill="#10b981"/>
+    <path d="M 23 30 L 28 35 L 37 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="54" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="12" fill="#0d2342">Proof of Delivery</text>
+    <text x="54" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="10" fill="#64748b">Digital OTP &amp; Signature</text>
+  </g>
+</svg>

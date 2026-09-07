@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="wGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#1b3a60"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="380" rx="14" fill="url(#wGrad)"/>
+  
+  <!-- High Bay Racking System -->
+  <g stroke="#2c4d75" stroke-width="4">
+    <!-- Uprights left -->
+    <line x1="80" y1="40" x2="80" y2="340"/>
+    <line x1="200" y1="40" x2="200" y2="340"/>
+    <!-- Uprights right -->
+    <line x1="400" y1="40" x2="400" y2="340"/>
+    <line x1="520" y1="40" x2="520" y2="340"/>
+    <!-- Shelves Left -->
+    <line x1="80" y1="120" x2="200" y2="120"/>
+    <line x1="80" y1="200" x2="200" y2="200"/>
+    <line x1="80" y1="280" x2="200" y2="280"/>
+    <!-- Shelves Right -->
+    <line x1="400" y1="120" x2="520" y2="120"/>
+    <line x1="400" y1="200" x2="520" y2="200"/>
+    <line x1="400" y1="280" x2="520" y2="280"/>
+  </g>
+
+  <!-- Pallets and Cargo Boxes -->
+  <!-- Left Rack Boxes -->
+  <rect x="95" y="70" width="90" height="48" rx="3" fill="#f36b13"/>
+  <rect x="95" y="150" width="40" height="48" rx="3" fill="#e2e8f0"/>
+  <rect x="145" y="150" width="40" height="48" rx="3" fill="#cbd5e1"/>
+  <rect x="95" y="230" width="90" height="48" rx="3" fill="#3b82f6" opacity="0.8"/>
+  
+  <!-- Right Rack Boxes -->
+  <rect x="415" y="70" width="40" height="48" rx="3" fill="#e2e8f0"/>
+  <rect x="465" y="70" width="40" height="48" rx="3" fill="#f36b13"/>
+  <rect x="415" y="150" width="90" height="48" rx="3" fill="#ffffff"/>
+  <rect x="415" y="230" width="90" height="48" rx="3" fill="#f36b13" opacity="0.9"/>
+
+  <!-- Forklift Silhouette in Center Aisle -->
+  <g transform="translate(250, 220)">
+    <rect x="25" y="60" width="55" height="40" rx="6" fill="#f36b13"/>
+    <rect x="60" y="30" width="20" height="40" rx="3" fill="#1e293b"/>
+    <line x1="85" y1="10" x2="85" y2="100" stroke="#cbd5e1" stroke-width="4"/>
+    <polygon points="85,60 110,60 110,65 85,65" fill="#e2e8f0"/>
+    <!-- Pallet on Forklift -->
+    <rect x="90" y="35" width="25" height="25" rx="2" fill="#ffffff"/>
+    <circle cx="35" cy="100" r="12" fill="#0f172a"/>
+    <circle cx="75" cy="100" r="12" fill="#0f172a"/>
+  </g>
+
+  <!-- Status Card -->
+  <g transform="translate(195, 30)">
+    <rect width="210" height="48" rx="8" fill="rgba(7,22,44,0.85)" stroke="rgba(255,255,255,0.15)"/>
+    <circle cx="24" cy="24" r="8" fill="#10b981"/>
+    <text x="42" y="22" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="12" fill="#ffffff">Secure Riyadh Storage</text>
+    <text x="42" y="36" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="10" fill="#94a3b8">Short &amp; Long-Term Capacity</text>
+  </g>
+</svg>

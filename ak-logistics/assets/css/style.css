@@ -1,0 +1,1032 @@
+/* ==========================================================================
+   AK LOGISTICS COMPANY - OFFICIAL STYLESHEET
+   Location: Riyadh, Kingdom of Saudi Arabia
+   Description: Premium corporate 3PL logistics and supply chain website
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS Custom Properties & Design Tokens
+   -------------------------------------------------------------------------- */
+:root {
+  /* Brand Colors */
+  --ak-navy-dark: #07162c;
+  --ak-navy: #0d2342;
+  --ak-navy-light: #163663;
+  --ak-navy-subtle: #e9eff7;
+  
+  --ak-orange: #f36b13;
+  --ak-orange-dark: #d85705;
+  --ak-orange-light: #ff8533;
+  --ak-orange-subtle: #fff2ea;
+
+  --ak-gray-100: #f8fafc;
+  --ak-gray-200: #eef2f6;
+  --ak-gray-300: #e2e8f0;
+  --ak-gray-400: #94a3b8;
+  --ak-gray-600: #475569;
+  --ak-gray-800: #1e293b;
+  --ak-gray-900: #0f172a;
+
+  --ak-white: #ffffff;
+  --ak-text-main: #334155;
+  --ak-text-heading: #0d2342;
+
+  /* Typography */
+  --ak-font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Shadows */
+  --ak-shadow-sm: 0 2px 6px rgba(13, 35, 66, 0.06);
+  --ak-shadow-md: 0 10px 25px -3px rgba(13, 35, 66, 0.08), 0 4px 6px -2px rgba(13, 35, 66, 0.04);
+  --ak-shadow-lg: 0 20px 35px -5px rgba(13, 35, 66, 0.12), 0 10px 10px -5px rgba(13, 35, 66, 0.04);
+  --ak-shadow-hover: 0 22px 40px -6px rgba(243, 107, 19, 0.18), 0 12px 18px -4px rgba(13, 35, 66, 0.08);
+
+  /* Transitions */
+  --ak-transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --ak-transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   2. Base & Reset
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--ak-font-sans);
+  color: var(--ak-text-main);
+  background-color: var(--ak-white);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--ak-font-sans);
+  color: var(--ak-text-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+a {
+  color: var(--ak-navy);
+  text-decoration: none;
+  transition: color var(--ak-transition-fast);
+}
+
+a:hover {
+  color: var(--ak-orange);
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   3. Top Bar Component
+   -------------------------------------------------------------------------- */
+.ak-topbar {
+  background-color: var(--ak-navy-dark);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.85rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ak-topbar a {
+  color: rgba(255, 255, 255, 0.9);
+  transition: color var(--ak-transition-fast);
+}
+
+.ak-topbar a:hover {
+  color: var(--ak-orange);
+}
+
+.ak-topbar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.ak-topbar-item i {
+  color: var(--ak-orange);
+}
+
+/* --------------------------------------------------------------------------
+   4. Navigation Bar
+   -------------------------------------------------------------------------- */
+.ak-navbar {
+  background-color: var(--ak-white);
+  box-shadow: var(--ak-shadow-sm);
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1040;
+  transition: padding var(--ak-transition-base), box-shadow var(--ak-transition-base);
+}
+
+.ak-navbar.scrolled {
+  padding: 10px 0;
+  box-shadow: var(--ak-shadow-md);
+}
+
+/* Brand Logo */
+.ak-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--ak-navy);
+  letter-spacing: -0.02em;
+}
+
+.ak-brand:hover {
+  color: var(--ak-navy);
+}
+
+.ak-brand-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--ak-navy) 0%, var(--ak-navy-light) 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ak-white);
+  font-size: 1.25rem;
+  box-shadow: 0 4px 12px rgba(13, 35, 66, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.ak-brand-icon::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  background-color: var(--ak-orange);
+  border-radius: 4px 0 10px 0;
+}
+
+.ak-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.ak-brand-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ak-navy);
+}
+
+.ak-brand-subtitle {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ak-orange-dark);
+  font-weight: 700;
+}
+
+/* Nav Links */
+.ak-navbar .nav-link {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ak-gray-800);
+  padding: 0.5rem 0.9rem !important;
+  border-radius: 6px;
+  transition: all var(--ak-transition-fast);
+}
+
+.ak-navbar .nav-link:hover,
+.ak-navbar .nav-link:focus,
+.ak-navbar .nav-link.active {
+  color: var(--ak-orange);
+  background-color: var(--ak-orange-subtle);
+}
+
+/* Dropdown Menu */
+.ak-navbar .dropdown-menu {
+  border: 1px solid var(--ak-gray-200);
+  box-shadow: var(--ak-shadow-lg);
+  border-radius: 12px;
+  padding: 10px;
+  min-width: 280px;
+  animation: fadeInDown 0.2s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ak-navbar .dropdown-item {
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: var(--ak-gray-800);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all var(--ak-transition-fast);
+}
+
+.ak-navbar .dropdown-item i {
+  color: var(--ak-orange);
+  font-size: 1rem;
+}
+
+.ak-navbar .dropdown-item:hover,
+.ak-navbar .dropdown-item:focus,
+.ak-navbar .dropdown-item.active {
+  background-color: var(--ak-navy-subtle);
+  color: var(--ak-navy);
+  transform: translateX(4px);
+}
+
+/* Header CTA Button */
+.btn-ak-quote {
+  background-color: var(--ak-orange);
+  color: var(--ak-white) !important;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 9px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(243, 107, 19, 0.3);
+  transition: all var(--ak-transition-base);
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-ak-quote:hover {
+  background-color: var(--ak-orange-dark);
+  box-shadow: 0 6px 20px rgba(216, 87, 5, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-ak-quote:active {
+  transform: translateY(0);
+}
+
+/* Secondary Button */
+.btn-ak-outline {
+  color: var(--ak-white);
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 8px;
+  transition: all var(--ak-transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-ak-outline:hover {
+  background-color: var(--ak-white);
+  color: var(--ak-navy);
+  border-color: var(--ak-white);
+}
+
+.btn-ak-primary {
+  background-color: var(--ak-navy);
+  color: var(--ak-white);
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  transition: all var(--ak-transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-ak-primary:hover {
+  background-color: var(--ak-navy-light);
+  color: var(--ak-white);
+  transform: translateY(-2px);
+  box-shadow: var(--ak-shadow-md);
+}
+
+/* --------------------------------------------------------------------------
+   5. Hero Sections
+   -------------------------------------------------------------------------- */
+.ak-hero {
+  position: relative;
+  background-color: var(--ak-navy-dark);
+  color: var(--ak-white);
+  padding: 90px 0 80px;
+  overflow: hidden;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(22, 54, 99, 0.6) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(243, 107, 19, 0.12) 0%, transparent 40%);
+}
+
+.ak-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(7, 22, 44, 0.95) 0%, rgba(13, 35, 66, 0.88) 100%);
+  z-index: 1;
+}
+
+.ak-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.ak-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(243, 107, 19, 0.18);
+  color: #ffa466;
+  border: 1px solid rgba(243, 107, 19, 0.4);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 20px;
+}
+
+.ak-hero-title {
+  color: var(--ak-white);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.ak-hero-subtitle {
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.ak-hero-visual {
+  position: relative;
+  z-index: 2;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ak-hero-inner {
+  position: relative;
+  background-color: var(--ak-navy-dark);
+  color: var(--ak-white);
+  padding: 60px 0 50px;
+  background-image: linear-gradient(135deg, rgba(7, 22, 44, 0.96) 0%, rgba(13, 35, 66, 0.92) 100%);
+}
+
+.ak-hero-inner .ak-hero-title {
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  margin-bottom: 12px;
+}
+
+.ak-hero-inner .ak-hero-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 15px;
+}
+
+/* --------------------------------------------------------------------------
+   6. Breadcrumbs
+   -------------------------------------------------------------------------- */
+.ak-breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+.ak-breadcrumb .breadcrumb-item a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.ak-breadcrumb .breadcrumb-item a:hover {
+  color: var(--ak-orange-light);
+}
+
+.ak-breadcrumb .breadcrumb-item.active {
+  color: var(--ak-orange);
+  font-weight: 600;
+}
+
+.ak-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   7. Section Headers & Layouts
+   -------------------------------------------------------------------------- */
+.section-padding {
+  padding: 80px 0;
+}
+
+.section-padding-sm {
+  padding: 50px 0;
+}
+
+.bg-light-surface {
+  background-color: var(--ak-gray-100);
+}
+
+.bg-navy-surface {
+  background-color: var(--ak-navy);
+  color: var(--ak-white);
+}
+
+.ak-section-header {
+  margin-bottom: 45px;
+}
+
+.ak-section-eyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ak-orange);
+  margin-bottom: 8px;
+}
+
+.ak-section-title {
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  font-weight: 800;
+  color: var(--ak-navy);
+  margin-bottom: 12px;
+}
+
+.bg-navy-surface .ak-section-title {
+  color: var(--ak-white);
+}
+
+.ak-section-desc {
+  font-size: 1.05rem;
+  color: var(--ak-gray-600);
+  max-width: 680px;
+}
+
+.bg-navy-surface .ak-section-desc {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* --------------------------------------------------------------------------
+   8. Cards & Feature Items
+   -------------------------------------------------------------------------- */
+.ak-card {
+  background-color: var(--ak-white);
+  border: 1px solid var(--ak-gray-200);
+  border-radius: 12px;
+  padding: 30px 24px;
+  height: 100%;
+  box-shadow: var(--ak-shadow-sm);
+  transition: transform var(--ak-transition-base), box-shadow var(--ak-transition-base), border-color var(--ak-transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.ak-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ak-shadow-md);
+  border-color: rgba(243, 107, 19, 0.3);
+}
+
+.ak-card-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--ak-navy-subtle);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  color: var(--ak-navy);
+  margin-bottom: 20px;
+  transition: all var(--ak-transition-fast);
+}
+
+.ak-card:hover .ak-card-icon {
+  background-color: var(--ak-orange);
+  color: var(--ak-white);
+  transform: scale(1.05);
+}
+
+.ak-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--ak-navy);
+}
+
+.ak-card-text {
+  font-size: 0.95rem;
+  color: var(--ak-gray-600);
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.ak-card-link {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--ak-orange);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.ak-card-link i {
+  transition: transform var(--ak-transition-fast);
+}
+
+.ak-card-link:hover i {
+  transform: translateX(4px);
+}
+
+/* Feature List Inside Service Cards */
+.ak-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.ak-feature-list li {
+  font-size: 0.9rem;
+  color: var(--ak-gray-600);
+  padding: 5px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.ak-feature-list li i {
+  color: var(--ak-orange);
+  font-size: 1rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Value Cards (About Page) */
+.ak-value-card {
+  background-color: var(--ak-white);
+  border: 1px solid var(--ak-gray-200);
+  border-radius: 12px;
+  padding: 24px 20px;
+  height: 100%;
+  border-left: 4px solid var(--ak-navy);
+  transition: all var(--ak-transition-base);
+}
+
+.ak-value-card:hover {
+  border-left-color: var(--ak-orange);
+  transform: translateY(-4px);
+  box-shadow: var(--ak-shadow-md);
+}
+
+.ak-value-card .value-num {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--ak-gray-400);
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.ak-value-card h5 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.ak-value-card p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--ak-gray-600);
+}
+
+/* --------------------------------------------------------------------------
+   9. Call to Action Banner (Reusable)
+   -------------------------------------------------------------------------- */
+.ak-cta-banner {
+  background: linear-gradient(135deg, var(--ak-navy) 0%, var(--ak-navy-dark) 100%);
+  color: var(--ak-white);
+  border-radius: 16px;
+  padding: 50px 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--ak-shadow-lg);
+}
+
+.ak-cta-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(243, 107, 19, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.ak-cta-banner h2 {
+  color: var(--ak-white);
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.ak-cta-banner p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 680px;
+  margin-bottom: 25px;
+}
+
+/* --------------------------------------------------------------------------
+   10. Forms & Validation
+   -------------------------------------------------------------------------- */
+.ak-form-card {
+  background-color: var(--ak-white);
+  border: 1px solid var(--ak-gray-200);
+  border-radius: 14px;
+  padding: 35px 30px;
+  box-shadow: var(--ak-shadow-md);
+}
+
+.ak-form-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ak-gray-800);
+  margin-bottom: 6px;
+}
+
+.ak-form-control,
+.ak-form-select {
+  border: 1px solid var(--ak-gray-300);
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-size: 0.95rem;
+  color: var(--ak-gray-900);
+  background-color: var(--ak-white);
+  transition: border-color var(--ak-transition-fast), box-shadow var(--ak-transition-fast);
+}
+
+.ak-form-control:focus,
+.ak-form-select:focus {
+  border-color: var(--ak-orange);
+  box-shadow: 0 0 0 3px rgba(243, 107, 19, 0.15);
+  outline: none;
+}
+
+/* Modern Accessible User-Invalid state */
+.ak-form-control:user-invalid,
+.ak-form-select:user-invalid {
+  border-color: #dc3545;
+  background-image: none;
+}
+
+.form-help-text {
+  font-size: 0.8rem;
+  color: var(--ak-gray-400);
+  margin-top: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   11. FAQ Accordion
+   -------------------------------------------------------------------------- */
+.ak-accordion .accordion-item {
+  border: 1px solid var(--ak-gray-200);
+  border-radius: 10px !important;
+  margin-bottom: 12px;
+  overflow: hidden;
+  box-shadow: var(--ak-shadow-sm);
+}
+
+.ak-accordion .accordion-button {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ak-navy);
+  background-color: var(--ak-white);
+  padding: 18px 20px;
+}
+
+.ak-accordion .accordion-button:not(.collapsed) {
+  background-color: var(--ak-navy-subtle);
+  color: var(--ak-navy);
+  box-shadow: none;
+}
+
+.ak-accordion .accordion-button:focus {
+  box-shadow: none;
+  border-color: var(--ak-gray-200);
+}
+
+.ak-accordion .accordion-body {
+  padding: 18px 20px;
+  color: var(--ak-gray-600);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   12. Quick Action / Floating WhatsApp Widget
+   -------------------------------------------------------------------------- */
+.ak-floating-actions {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1030;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.ak-float-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ak-white);
+  font-size: 1.4rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all var(--ak-transition-base);
+  text-decoration: none;
+}
+
+.ak-float-btn:hover {
+  color: var(--ak-white);
+  transform: scale(1.1);
+}
+
+.ak-float-whatsapp {
+  background-color: #25d366;
+}
+
+.ak-float-call {
+  background-color: var(--ak-navy);
+}
+
+.ak-float-quote {
+  background-color: var(--ak-orange);
+}
+
+/* Scroll To Top Button */
+.ak-back-to-top {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--ak-navy);
+  color: var(--ak-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: var(--ak-shadow-md);
+  border: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--ak-transition-base);
+  z-index: 1020;
+}
+
+.ak-back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ak-back-to-top:hover {
+  background-color: var(--ak-orange);
+  color: var(--ak-white);
+  transform: translateY(-3px);
+}
+
+/* --------------------------------------------------------------------------
+   13. Footer
+   -------------------------------------------------------------------------- */
+.ak-footer {
+  background-color: var(--ak-navy-dark);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 70px 0 25px;
+  border-top: 4px solid var(--ak-orange);
+}
+
+.ak-footer h5 {
+  color: var(--ak-white);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.ak-footer h5::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 36px;
+  height: 3px;
+  background-color: var(--ak-orange);
+  border-radius: 2px;
+}
+
+.ak-footer p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.92rem;
+}
+
+.ak-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ak-footer-links li {
+  margin-bottom: 10px;
+}
+
+.ak-footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.92rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--ak-transition-fast);
+}
+
+.ak-footer-links a i {
+  color: var(--ak-orange);
+  font-size: 0.75rem;
+}
+
+.ak-footer-links a:hover {
+  color: var(--ak-white);
+  transform: translateX(4px);
+}
+
+.ak-footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 0.92rem;
+}
+
+.ak-footer-contact-item i {
+  color: var(--ak-orange);
+  font-size: 1.1rem;
+  margin-top: 3px;
+}
+
+.ak-footer-bottom {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ak-footer-bottom a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.ak-footer-bottom a:hover {
+  color: var(--ak-orange);
+}
+
+/* --------------------------------------------------------------------------
+   14. Industry Badges & Highlights
+   -------------------------------------------------------------------------- */
+.ak-industry-card {
+  background: var(--ak-white);
+  border: 1px solid var(--ak-gray-200);
+  border-radius: 12px;
+  padding: 24px;
+  height: 100%;
+  transition: all var(--ak-transition-base);
+}
+
+.ak-industry-card:hover {
+  border-color: var(--ak-orange);
+  box-shadow: var(--ak-shadow-md);
+  transform: translateY(-4px);
+}
+
+.ak-industry-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: var(--ak-navy-subtle);
+  color: var(--ak-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  transition: all var(--ak-transition-fast);
+}
+
+.ak-industry-card:hover .ak-industry-icon {
+  background-color: var(--ak-orange);
+  color: var(--ak-white);
+}
+
+/* --------------------------------------------------------------------------
+   15. Responsive Refinements
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .ak-topbar {
+    display: none;
+  }
+  
+  .ak-navbar .navbar-collapse {
+    background-color: var(--ak-white);
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: var(--ak-shadow-lg);
+    margin-top: 10px;
+  }
+
+  .ak-hero {
+    padding: 60px 0 50px;
+  }
+
+  .section-padding {
+    padding: 55px 0;
+  }
+
+  .ak-cta-banner {
+    padding: 35px 24px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ak-hero-title {
+    font-size: 2rem;
+  }
+  
+  .btn-ak-quote, .btn-ak-primary, .btn-ak-outline {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .ak-hero-visual {
+    margin-top: 25px;
+  }
+
+  .ak-form-card {
+    padding: 24px 18px;
+  }
+
+  .ak-floating-actions {
+    bottom: 16px;
+    right: 16px;
+  }
+  
+  .ak-back-to-top {
+    bottom: 16px;
+    left: 16px;
+  }
+}
