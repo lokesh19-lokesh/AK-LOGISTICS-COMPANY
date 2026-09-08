@@ -748,7 +748,7 @@ img, svg {
 
 /* Mobile Nav Toggle Button */
 .ak-mobile-nav-toggle {
-  background: rgba(30, 39, 46, 0.85);
+  background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.25);
   color: #ffffff;
   border-radius: 12px;
@@ -758,6 +758,14 @@ img, svg {
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all var(--ak-transition-fast);
+}
+
+.ak-mobile-nav-toggle:hover,
+.ak-mobile-nav-toggle:focus {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.45);
 }
 
 @media (max-width: 991px) {
@@ -1146,20 +1154,25 @@ img, svg {
 @media (max-width: 991px) {
   .ak-floating-nav-wrapper {
     min-height: 64px;
+    background-color: var(--ak-navy) !important;
   }
   .ak-floating-navbar-container {
     padding: 10px 16px;
     align-items: center;
+    background-color: var(--ak-navy) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
   .ak-floating-navbar-container.is-scrolled {
     padding: 8px 16px !important;
+    background: rgba(7, 21, 43, 0.98) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
   }
   .ak-nav-logo-badge {
     margin-top: 0;
     padding: 0;
-    background: transparent;
+    background: transparent !important;
     border-radius: 50%;
-    box-shadow: none;
+    box-shadow: none !important;
   }
   .ak-nav-emblem {
     width: 54px;
@@ -1167,6 +1180,9 @@ img, svg {
   }
   .ak-nav-actions {
     display: none;
+  }
+  .ak-hero-frame-wrapper {
+    background-color: var(--ak-navy);
   }
   .ak-hero-body {
     padding: 30px 0 20px;
