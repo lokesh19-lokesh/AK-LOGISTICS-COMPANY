@@ -71,6 +71,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 3b. Mobile Offcanvas (Home Page index.html) Auto-Close on Navigation
+  const mobileOffcanvas = document.getElementById('akMobileOffcanvas');
+  if (mobileOffcanvas) {
+    const offcanvasLinks = mobileOffcanvas.querySelectorAll('a[href]:not([data-bs-toggle])');
+    offcanvasLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (typeof bootstrap !== 'undefined' && bootstrap.Offcanvas) {
+          const bsOffcanvas = bootstrap.Offcanvas.getInstance(mobileOffcanvas);
+          if (bsOffcanvas) {
+            bsOffcanvas.hide();
+          }
+        }
+      });
+    });
+  }
+
+  // 3c. Mobile Services Accordion Toggle Sync
+  const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+  const mobileServicesSubmenu = document.getElementById('mobileServicesSubmenu');
+  const mobileServicesChevron = document.getElementById('mobileServicesChevron');
+
+  if (mobileServicesToggle && mobileServicesSubmenu) {
+    mobileServicesSubmenu.addEventListener('show.bs.collapse', () => {
+      if (mobileServicesChevron) {
+        mobileServicesChevron.style.transform = 'rotate(180deg)';
+      }
+      mobileServicesToggle.classList.add('text-white');
+      mobileServicesToggle.classList.remove('text-white-50');
+    });
+
+    mobileServicesSubmenu.addEventListener('hide.bs.collapse', () => {
+      if (mobileServicesChevron) {
+        mobileServicesChevron.style.transform = 'rotate(0deg)';
+      }
+      mobileServicesToggle.classList.remove('text-white');
+      mobileServicesToggle.classList.add('text-white-50');
+    });
+  }
+
   // 4. Highlight Active Navigation Item
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   const allNavLinks = document.querySelectorAll('.ak-navbar .nav-link, .ak-navbar .dropdown-item');
