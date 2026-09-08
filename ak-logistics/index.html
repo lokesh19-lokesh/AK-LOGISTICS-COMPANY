@@ -86,18 +86,18 @@
           <li class="ak-nav-pill-item dropdown">
             <a href="services.html" class="ak-pill-link dropdown-toggle" id="heroServicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="heroServicesDropdown">
-              <li><a class="dropdown-item fw-bold text-info" href="services.html"><i class="bi bi-grid-fill"></i> All Services Overview</a></li>
+              <li><a class="dropdown-item fw-bold text-info" href="services.html"><i class="bi bi-grid-fill"></i><span>All Services Overview</span></a></li>
               <li><hr class="dropdown-divider my-1"></li>
-              <li><a class="dropdown-item" href="transportation.html"><i class="bi bi-truck"></i> Transportation &amp; Freight</a></li>
-              <li><a class="dropdown-item" href="warehousing.html"><i class="bi bi-building"></i> Warehousing &amp; Storage</a></li>
-              <li><a class="dropdown-item" href="inventory-management.html"><i class="bi bi-boxes"></i> Inventory Management</a></li>
-              <li><a class="dropdown-item" href="distribution.html"><i class="bi bi-geo"></i> Distribution &amp; Last-Mile</a></li>
-              <li><a class="dropdown-item" href="order-fulfillment.html"><i class="bi bi-box-arrow-up-right"></i> Order Fulfillment</a></li>
-              <li><a class="dropdown-item" href="supply-chain.html"><i class="bi bi-diagram-3"></i> Supply Chain Management</a></li>
-              <li><a class="dropdown-item" href="reverse-logistics.html"><i class="bi bi-arrow-repeat"></i> Reverse Logistics</a></li>
-              <li><a class="dropdown-item" href="logistics-consulting.html"><i class="bi bi-graph-up-arrow"></i> Logistics Consulting</a></li>
-              <li><a class="dropdown-item" href="value-added-services.html"><i class="bi bi-patch-check"></i> Value-Added Services</a></li>
-              <li><a class="dropdown-item" href="technology-logistics.html"><i class="bi bi-cpu"></i> Technology-Driven Logistics</a></li>
+              <li><a class="dropdown-item" href="transportation.html"><i class="bi bi-truck"></i><span>Transportation &amp; Freight</span></a></li>
+              <li><a class="dropdown-item" href="warehousing.html"><i class="bi bi-building"></i><span>Warehousing &amp; Storage</span></a></li>
+              <li><a class="dropdown-item" href="inventory-management.html"><i class="bi bi-boxes"></i><span>Inventory Management</span></a></li>
+              <li><a class="dropdown-item" href="distribution.html"><i class="bi bi-geo"></i><span>Distribution &amp; Last-Mile</span></a></li>
+              <li><a class="dropdown-item" href="order-fulfillment.html"><i class="bi bi-box-arrow-up-right"></i><span>Order Fulfillment</span></a></li>
+              <li><a class="dropdown-item" href="supply-chain.html"><i class="bi bi-diagram-3"></i><span>Supply Chain Management</span></a></li>
+              <li><a class="dropdown-item" href="reverse-logistics.html"><i class="bi bi-arrow-repeat"></i><span>Reverse Logistics</span></a></li>
+              <li><a class="dropdown-item" href="logistics-consulting.html"><i class="bi bi-graph-up-arrow"></i><span>Logistics Consulting</span></a></li>
+              <li><a class="dropdown-item" href="value-added-services.html"><i class="bi bi-patch-check"></i><span>Value-Added Services</span></a></li>
+              <li><a class="dropdown-item" href="technology-logistics.html"><i class="bi bi-cpu"></i><span>Technology-Driven Logistics</span></a></li>
             </ul>
           </li>
           <li class="ak-nav-pill-item"><a href="industries.html" class="ak-pill-link">Industries</a></li>
@@ -214,7 +214,84 @@
       <ul class="navbar-nav mb-4">
         <li class="nav-item"><a class="nav-link text-white py-2" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link text-white-50 py-2" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link text-white-50 py-2" href="services.html">Services</a></li>
+        <!-- Services Accordion Dropdown in Mobile Offcanvas -->
+        <li class="nav-item">
+          <a class="nav-link text-white-50 py-2 d-flex justify-content-between align-items-center" href="#mobileServicesSubmenu" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="mobileServicesSubmenu" id="mobileServicesToggle">
+            <span>Services</span>
+            <i class="bi bi-chevron-down" id="mobileServicesChevron"></i>
+          </a>
+          <div class="collapse" id="mobileServicesSubmenu">
+            <ul class="list-unstyled ps-2 pe-1 py-2 bg-black bg-opacity-30 rounded-3 mt-1 border border-secondary border-opacity-25">
+              <li class="mb-1">
+                <a class="ak-mobile-sublink text-info fw-bold" href="services.html">
+                  <i class="bi bi-grid-fill"></i>
+                  <span>All Services Overview</span>
+                </a>
+              </li>
+              <li><hr class="dropdown-divider border-secondary my-1"></li>
+              <li class="mb-1">
+                <a class="ak-mobile-sublink" href="transportation.html">
+                  <i class="bi bi-truck"></i>
+                  <span>Transportation &amp; Freight</span>
+                </a>
+              </li>
+              <li class="mb-1">
+                <a class="ak-mobile-sublink" href="warehousing.html">
+                  <i class="bi bi-building"></i>
+                  <span>Warehousing &amp; Storage</span>
+                </a>
+              </li>
+              <li class="mb-1">
+                <a class="ak-mobile-sublink" href="inventory-management.html">
+                  <i class="bi bi-boxes"></i>
+                  <span>Inventory Management</span>
+                </a>
+              </li>
+              <li class="mb-1">
+                <a class="ak-mobile-sublink" href="distribution.html">
+                  <i class="bi bi-geo"></i>
+                  <span>Distribution &amp; Last-Mile</span>
+                </a>
+              </li>
+              <li class="mb-1">
+                <a class="ak-mobile-sublink" href="order-fulfillment.html">
+                  <i class="bi bi-box-arrow-up-right"></i>
+                  <span>Order Fulfillment</span>
+                </a>
+              </li>
+              <li class="mb-1">
+                <a class="ak-mobile-sublink" href="supply-chain.html">
+                  <i class="bi bi-diagram-3"></i>
+                  <span>Supply Chain Management</span>
+                </a>
+              </li>
+              <li class="mb-1">
+                <a class="ak-mobile-sublink" href="reverse-logistics.html">
+                  <i class="bi bi-arrow-repeat"></i>
+                  <span>Reverse Logistics</span>
+                </a>
+              </li>
+              <li class="mb-1">
+                <a class="ak-mobile-sublink" href="logistics-consulting.html">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <span>Logistics Consulting</span>
+                </a>
+              </li>
+              <li class="mb-1">
+                <a class="ak-mobile-sublink" href="value-added-services.html">
+                  <i class="bi bi-patch-check"></i>
+                  <span>Value-Added Services</span>
+                </a>
+              </li>
+              <li class="mb-1">
+                <a class="ak-mobile-sublink" href="technology-logistics.html">
+                  <i class="bi bi-cpu"></i>
+                  <span>Technology-Driven Logistics</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
         <li class="nav-item"><a class="nav-link text-white-50 py-2" href="industries.html">Industries</a></li>
         <li class="nav-item"><a class="nav-link text-white-50 py-2" href="why-choose-us.html">Why Choose Us</a></li>
         <li class="nav-item"><a class="nav-link text-white-50 py-2" href="contact.html">Contact Us</a></li>

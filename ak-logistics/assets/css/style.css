@@ -231,21 +231,35 @@ img, svg {
   }
 }
 
-.ak-navbar .dropdown-item {
+/* Universal Dropdown Styling & Generous Icon-to-Text Spacing */
+.dropdown-item {
   font-weight: 500;
-  font-size: 0.9rem;
-  padding: 8px 14px;
+  font-size: 0.92rem;
+  padding: 10px 18px !important;
   border-radius: 8px;
-  color: var(--ak-charcoal);
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important; /* Space between icons and options */
   transition: all var(--ak-transition-fast);
+}
+
+.dropdown-item i {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 24px !important;
+  min-width: 24px !important;
+  font-size: 1.15rem !important;
+  margin-right: 4px !important;
+  flex-shrink: 0 !important;
+}
+
+.ak-navbar .dropdown-item {
+  color: var(--ak-charcoal);
 }
 
 .ak-navbar .dropdown-item i {
   color: var(--ak-blue); /* Icons: Logistics Blue */
-  font-size: 1rem;
 }
 
 .ak-navbar .dropdown-item:hover,
@@ -254,6 +268,100 @@ img, svg {
   background-color: var(--ak-blue-subtle);
   color: var(--ak-blue-dark);
   transform: translateX(4px);
+}
+
+/* Floating Navbar (Home Page Dark Pill) Dropdown Menu */
+.ak-nav-pill .dropdown-menu {
+  background: rgba(11, 28, 56, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  padding: 10px 8px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+  min-width: 310px;
+  margin-top: 10px;
+}
+
+.ak-nav-pill .dropdown-item {
+  color: #d1d5db;
+  font-size: 0.9rem;
+  padding: 9px 16px !important;
+  gap: 16px !important;
+}
+
+.ak-nav-pill .dropdown-item i {
+  color: #60a5fa; /* Light blue accent for icons */
+  font-size: 1.15rem !important;
+  width: 24px !important;
+  min-width: 24px !important;
+  margin-right: 4px !important;
+}
+
+.ak-nav-pill .dropdown-item:hover,
+.ak-nav-pill .dropdown-item:focus {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.ak-nav-pill .dropdown-item.fw-bold.text-info {
+  color: #38bdf8 !important;
+}
+
+.ak-nav-pill .dropdown-item.fw-bold.text-info i {
+  color: #38bdf8 !important;
+}
+
+/* Mobile Offcanvas Submenu Styling */
+.ak-mobile-sublink {
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-size: 0.92rem;
+  padding: 9px 14px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.ak-mobile-sublink i {
+  width: 24px;
+  min-width: 24px;
+  text-align: center;
+  color: #60a5fa;
+  font-size: 1.15rem;
+  margin-right: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ak-mobile-sublink:hover,
+.ak-mobile-sublink:focus {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: translateX(4px);
+}
+
+#mobileServicesToggle {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#mobileServicesToggle[aria-expanded="true"] {
+  color: #ffffff !important;
+}
+
+#mobileServicesToggle[aria-expanded="true"] #mobileServicesChevron {
+  transform: rotate(180deg);
+  color: #60a5fa;
+}
+
+#mobileServicesChevron {
+  transition: transform 0.25s ease;
 }
 
 /* --------------------------------------------------------------------------
