@@ -44,7 +44,7 @@
   <!-- Bootstrap Icons 1.11.3 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) placeholder
@@ -68,67 +68,69 @@
     </div>
   </div>
 
-  <!-- 2. Modern Curved Hero & Integrated Floating Navigation -->
+  <!-- 2. Modern Floating Navigation Bar (Always Visible On Scroll) -->
+  <div class="ak-floating-nav-wrapper" id="akFloatingNavWrapper">
+    <header class="ak-floating-navbar-container" id="akFloatingNav">
+      <!-- Left Badge: White Cutout with AK Logistics Logo -->
+      <div class="ak-nav-logo-badge">
+        <a href="index.html" class="ak-logo-link" aria-label="AK Logistics Company">
+          <img src="assets/images/logo.png" alt="AK Logistics Company" class="ak-nav-emblem">
+        </a>
+      </div>
+
+      <!-- Center Pill: Navigation Links -->
+      <nav class="ak-nav-pill" aria-label="Main Navigation">
+        <ul class="ak-nav-pill-list">
+          <li class="ak-nav-pill-item"><a href="index.html" class="ak-pill-link active">Home</a></li>
+          <li class="ak-nav-pill-item"><a href="about.html" class="ak-pill-link">About Us</a></li>
+          <li class="ak-nav-pill-item dropdown">
+            <a href="services.html" class="ak-pill-link dropdown-toggle" id="heroServicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="heroServicesDropdown">
+              <li><a class="dropdown-item fw-bold text-info" href="services.html"><i class="bi bi-grid-fill"></i> All Services Overview</a></li>
+              <li><hr class="dropdown-divider my-1"></li>
+              <li><a class="dropdown-item" href="transportation.html"><i class="bi bi-truck"></i> Transportation &amp; Freight</a></li>
+              <li><a class="dropdown-item" href="warehousing.html"><i class="bi bi-building"></i> Warehousing &amp; Storage</a></li>
+              <li><a class="dropdown-item" href="inventory-management.html"><i class="bi bi-boxes"></i> Inventory Management</a></li>
+              <li><a class="dropdown-item" href="distribution.html"><i class="bi bi-geo"></i> Distribution &amp; Last-Mile</a></li>
+              <li><a class="dropdown-item" href="order-fulfillment.html"><i class="bi bi-box-arrow-up-right"></i> Order Fulfillment</a></li>
+              <li><a class="dropdown-item" href="supply-chain.html"><i class="bi bi-diagram-3"></i> Supply Chain Management</a></li>
+              <li><a class="dropdown-item" href="reverse-logistics.html"><i class="bi bi-arrow-repeat"></i> Reverse Logistics</a></li>
+              <li><a class="dropdown-item" href="logistics-consulting.html"><i class="bi bi-graph-up-arrow"></i> Logistics Consulting</a></li>
+              <li><a class="dropdown-item" href="value-added-services.html"><i class="bi bi-patch-check"></i> Value-Added Services</a></li>
+              <li><a class="dropdown-item" href="technology-logistics.html"><i class="bi bi-cpu"></i> Technology-Driven Logistics</a></li>
+            </ul>
+          </li>
+          <li class="ak-nav-pill-item"><a href="industries.html" class="ak-pill-link">Industries</a></li>
+          <li class="ak-nav-pill-item"><a href="why-choose-us.html" class="ak-pill-link">Why Choose Us</a></li>
+          <li class="ak-nav-pill-item"><a href="contact.html" class="ak-pill-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Action Pill: Track & Contact -->
+      <div class="ak-nav-actions">
+        <a href="contact.html#tracking" class="ak-btn-pill ak-btn-pill-white">
+          <span>Tracking Package</span>
+          <span class="ak-btn-icon-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </a>
+        <a href="get-a-quote.html" class="ak-btn-pill ak-btn-pill-red" id="heroGetQuoteTop">
+          <span>Get in touch with us</span>
+          <span class="ak-btn-icon-circle"><i class="bi bi-arrow-up-right"></i></span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="ak-mobile-nav-toggle ak-mobile-toggle-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#akMobileOffcanvas" aria-controls="akMobileOffcanvas" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+    </header>
+  </div>
+
+  <!-- 3. Modern Curved Hero -->
   <div class="ak-hero-frame-wrapper">
     <div class="ak-hero-frame">
       <!-- Background cinematic truck image with subtle gradient overlay -->
       <div class="ak-hero-bg" id="akHeroBg" style="background-image: url('assets/images/hero-slide-1.jpg');"></div>
       <div class="ak-hero-vignette"></div>
-
-      <!-- Floating Header Bar -->
-      <header class="ak-floating-navbar-container">
-        <!-- Left Pill: Navigation Links -->
-        <nav class="ak-nav-pill" aria-label="Main Navigation">
-          <ul class="ak-nav-pill-list">
-            <li class="ak-nav-pill-item"><a href="index.html" class="ak-pill-link active">Home</a></li>
-            <li class="ak-nav-pill-item"><a href="about.html" class="ak-pill-link">About Us</a></li>
-            <li class="ak-nav-pill-item dropdown">
-              <a href="services.html" class="ak-pill-link dropdown-toggle" id="heroServicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="heroServicesDropdown">
-                <li><a class="dropdown-item fw-bold text-info" href="services.html"><i class="bi bi-grid-fill"></i> All Services Overview</a></li>
-                <li><hr class="dropdown-divider my-1"></li>
-                <li><a class="dropdown-item" href="transportation.html"><i class="bi bi-truck"></i> Transportation &amp; Freight</a></li>
-                <li><a class="dropdown-item" href="warehousing.html"><i class="bi bi-building"></i> Warehousing &amp; Storage</a></li>
-                <li><a class="dropdown-item" href="inventory-management.html"><i class="bi bi-boxes"></i> Inventory Management</a></li>
-                <li><a class="dropdown-item" href="distribution.html"><i class="bi bi-geo"></i> Distribution &amp; Last-Mile</a></li>
-                <li><a class="dropdown-item" href="order-fulfillment.html"><i class="bi bi-box-arrow-up-right"></i> Order Fulfillment</a></li>
-                <li><a class="dropdown-item" href="supply-chain.html"><i class="bi bi-diagram-3"></i> Supply Chain Management</a></li>
-                <li><a class="dropdown-item" href="reverse-logistics.html"><i class="bi bi-arrow-repeat"></i> Reverse Logistics</a></li>
-                <li><a class="dropdown-item" href="logistics-consulting.html"><i class="bi bi-graph-up-arrow"></i> Logistics Consulting</a></li>
-                <li><a class="dropdown-item" href="value-added-services.html"><i class="bi bi-patch-check"></i> Value-Added Services</a></li>
-                <li><a class="dropdown-item" href="technology-logistics.html"><i class="bi bi-cpu"></i> Technology-Driven Logistics</a></li>
-              </ul>
-            </li>
-            <li class="ak-nav-pill-item"><a href="industries.html" class="ak-pill-link">Industries</a></li>
-            <li class="ak-nav-pill-item"><a href="why-choose-us.html" class="ak-pill-link">Why Choose Us</a></li>
-            <li class="ak-nav-pill-item"><a href="contact.html" class="ak-pill-link">Contact Us</a></li>
-          </ul>
-        </nav>
-
-        <!-- Center Badge: White Cutout with AK Logistics Logo -->
-        <div class="ak-nav-logo-badge">
-          <a href="index.html" class="ak-logo-link" aria-label="AK Logistics Company">
-            <img src="assets/images/logo.png" alt="AK Logistics Company" class="ak-nav-emblem">
-          </a>
-        </div>
-
-        <!-- Right Action Pill: Track & Contact -->
-        <div class="ak-nav-actions">
-          <a href="contact.html#tracking" class="ak-btn-pill ak-btn-pill-white">
-            <span>Tracking Package</span>
-            <span class="ak-btn-icon-circle"><i class="bi bi-arrow-up-right"></i></span>
-          </a>
-          <a href="get-a-quote.html" class="ak-btn-pill ak-btn-pill-red" id="heroGetQuoteTop">
-            <span>Get in touch with us</span>
-            <span class="ak-btn-icon-circle"><i class="bi bi-arrow-up-right"></i></span>
-          </a>
-        </div>
-
-        <!-- Mobile Menu Toggle Button -->
-        <button class="ak-mobile-nav-toggle ak-mobile-toggle-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#akMobileOffcanvas" aria-controls="akMobileOffcanvas" aria-label="Toggle navigation">
-          <i class="bi bi-list fs-2"></i>
-        </button>
-      </header>
 
       <!-- Hero Main Content Area -->
       <div class="ak-hero-body">
@@ -843,6 +845,6 @@
   <!-- Bootstrap 5.3.3 Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS -->
-  <script src="assets/js/main.js?v=3"></script>
+  <script src="assets/js/main.js?v=4"></script>
 </body>
 </html>

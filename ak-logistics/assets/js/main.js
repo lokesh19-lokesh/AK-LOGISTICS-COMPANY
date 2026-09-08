@@ -21,6 +21,25 @@ document.addEventListener('DOMContentLoaded', () => {
         backToTopBtn.classList.remove('visible');
       }
     }
+    const floatingNav = document.getElementById('akFloatingNav');
+    const floatingWrapper = document.getElementById('akFloatingNavWrapper');
+    if (floatingNav) {
+      if (scrollY > 30) {
+        if (!floatingNav.classList.contains('is-scrolled')) {
+          floatingNav.classList.add('is-scrolled');
+        }
+        if (floatingWrapper && (!floatingWrapper.style.minHeight || floatingWrapper.style.minHeight === '0px')) {
+          floatingWrapper.style.minHeight = `${floatingNav.offsetHeight}px`;
+        }
+      } else {
+        if (floatingNav.classList.contains('is-scrolled')) {
+          floatingNav.classList.remove('is-scrolled');
+        }
+        if (floatingWrapper) {
+          floatingWrapper.style.minHeight = '';
+        }
+      }
+    }
   };
 
   window.addEventListener('scroll', handleScroll, { passive: true });

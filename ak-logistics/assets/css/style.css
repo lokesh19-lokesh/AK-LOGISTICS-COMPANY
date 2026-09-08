@@ -61,7 +61,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
@@ -69,7 +69,7 @@ body {
   color: var(--ak-text-main);
   background-color: var(--ak-white);
   line-height: 1.65;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -311,13 +311,13 @@ img, svg {
 }
 
 /* --------------------------------------------------------------------------
-   6. Hero Sections (Modern Curved Frame & Floating Navigation Overlay)
+   6. Hero Sections & Always-Visible Floating Navigation
    -------------------------------------------------------------------------- */
 .ak-hero-frame-wrapper {
   background-color: #ffffff;
   padding: 16px 20px 24px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 @media (max-width: 768px) {
@@ -335,6 +335,7 @@ img, svg {
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+  margin-top: 0;
 }
 
 @media (max-width: 991px) {
@@ -370,21 +371,65 @@ img, svg {
   z-index: 2;
 }
 
-/* Floating Navbar Container */
+/* Floating Navbar Wrapper - Locks layout height so hero never jumps on scroll */
+.ak-floating-nav-wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  width: 100%;
+  min-height: 80px;
+  background-color: #ffffff;
+}
+
+/* Floating Navbar Container (Always Visible When Scrolling) */
 .ak-floating-navbar-container {
   position: relative;
-  z-index: 10;
+  width: 100%;
+  z-index: 1050;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 28px 0;
+  padding: 12px 28px;
   gap: 15px;
+  background-color: #ffffff;
+  transition: background-color 0.25s ease, padding 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ak-floating-navbar-container.is-scrolled {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 1050 !important;
+  background: rgba(7, 21, 43, 0.96) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 10px 28px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+  animation: akNavSlideIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes akNavSlideIn {
+  from {
+    opacity: 0.85;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 1280px) {
   .ak-floating-navbar-container {
-    padding: 12px 18px 0;
+    padding: 10px 18px;
     gap: 10px;
+  }
+  .ak-floating-navbar-container.is-scrolled {
+    padding: 8px 18px !important;
   }
 }
 
@@ -455,22 +500,21 @@ img, svg {
   box-shadow: 0 4px 14px rgba(229, 37, 42, 0.4);
 }
 
-/* 2. Center Cutout Logo Badge */
+/* 2. Left Side Corner Logo Badge */
 .ak-nav-logo-badge {
   background: #ffffff;
-  padding: 10px 24px 12px;
-  border-radius: 0 0 30px 30px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  padding: 8px 18px;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -16px;
   transition: transform 0.3s ease;
   flex-shrink: 0;
 }
 
 .ak-nav-logo-badge:hover {
-  transform: translateY(2px);
+  transform: translateY(-2px);
 }
 
 .ak-logo-link {
@@ -481,11 +525,11 @@ img, svg {
 }
 
 .ak-nav-emblem {
-  width: 68px;
-  height: 68px;
+  width: 58px;
+  height: 58px;
   object-fit: contain;
   border-radius: 50%;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.12));
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
   display: block;
 }
 
@@ -758,20 +802,23 @@ img, svg {
 /* Responsive Overhauls for 1024px Screens (e.g. 1024x600) */
 @media (max-width: 1080px) {
   .ak-floating-navbar-container {
-    padding: 10px 12px 0;
+    padding: 10px 12px;
     gap: 6px;
+  }
+  .ak-floating-navbar-container.is-scrolled {
+    padding: 8px 14px !important;
   }
   .ak-pill-link {
     font-size: 0.78rem;
     padding: 5px 8px;
   }
   .ak-nav-emblem {
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
   }
   .ak-nav-logo-badge {
-    padding: 6px 14px 8px;
-    margin-top: -10px;
+    padding: 6px 14px;
+    margin-top: 0;
   }
   .ak-btn-pill {
     font-size: 0.74rem;
@@ -811,9 +858,15 @@ img, svg {
 
 /* Responsive Overhauls for Tablets & Mobile (under 991px) */
 @media (max-width: 991px) {
+  .ak-floating-nav-wrapper {
+    min-height: 64px;
+  }
   .ak-floating-navbar-container {
-    padding: 10px 14px 0;
+    padding: 10px 16px;
     align-items: center;
+  }
+  .ak-floating-navbar-container.is-scrolled {
+    padding: 8px 16px !important;
   }
   .ak-nav-logo-badge {
     margin-top: 0;
