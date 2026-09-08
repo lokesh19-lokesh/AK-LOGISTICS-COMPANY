@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3b. Mobile Offcanvas (Home Page index.html) Auto-Close on Navigation
+  // 3b. Mobile Offcanvas (Site-Wide) Auto-Close on Navigation
   const mobileOffcanvas = document.getElementById('akMobileOffcanvas');
   if (mobileOffcanvas) {
     const offcanvasLinks = mobileOffcanvas.querySelectorAll('a[href]:not([data-bs-toggle])');
