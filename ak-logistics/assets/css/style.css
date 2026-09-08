@@ -504,12 +504,12 @@ img, svg {
   box-shadow: 0 4px 14px rgba(229, 37, 42, 0.4);
 }
 
-/* 2. Left Side Corner Logo Badge */
+/* 2. Left Side Corner Logo Badge (Transparent Background & Larger Size) */
 .ak-nav-logo-badge {
-  background: #ffffff;
-  padding: 8px 18px;
-  border-radius: 50px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  background: transparent;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -518,7 +518,7 @@ img, svg {
 }
 
 .ak-nav-logo-badge:hover {
-  transform: translateY(-2px);
+  transform: scale(1.05);
 }
 
 .ak-logo-link {
@@ -529,12 +529,17 @@ img, svg {
 }
 
 .ak-nav-emblem {
-  width: 58px;
-  height: 58px;
+  width: 78px;
+  height: 78px;
   object-fit: contain;
   border-radius: 50%;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.35));
   display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.ak-nav-emblem:hover {
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.45));
 }
 
 /* 3. Right Action Buttons */
@@ -820,11 +825,13 @@ img, svg {
     padding: 8px 18px !important;
   }
   .ak-nav-logo-badge {
-    padding: 6px 14px;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
   }
   .ak-nav-emblem {
-    width: 48px;
-    height: 48px;
+    width: 66px;
+    height: 66px;
   }
   .ak-pill-link {
     font-size: 0.82rem;
@@ -929,12 +936,14 @@ img, svg {
     padding: 6px 14px !important;
   }
   .ak-nav-logo-badge {
-    padding: 4px 10px;
-    border-radius: 40px;
+    padding: 0;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: none;
   }
   .ak-nav-emblem {
-    width: 38px;
-    height: 38px;
+    width: 52px;
+    height: 52px;
   }
   .ak-pill-link {
     font-size: 0.74rem;
@@ -1039,13 +1048,14 @@ img, svg {
   }
   .ak-nav-logo-badge {
     margin-top: 0;
-    padding: 8px 16px;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: none;
   }
   .ak-nav-emblem {
-    width: 44px;
-    height: 44px;
+    width: 54px;
+    height: 54px;
   }
   .ak-nav-actions {
     display: none;
