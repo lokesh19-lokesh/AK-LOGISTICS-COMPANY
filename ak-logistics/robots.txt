@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow sensitive or system directories if created
+Disallow: /assets/private/
+Disallow: /admin/
+
+# Sitemaps
+Sitemap: https://aklogistic.me/sitemap.xml
