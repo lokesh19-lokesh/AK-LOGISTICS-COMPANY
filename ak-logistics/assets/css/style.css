@@ -3083,7 +3083,9 @@ img, svg {
   letter-spacing: 2.5px;
   background: linear-gradient(135deg, #003380 0%, #0066cc 60%, #0284c7 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
   margin-bottom: 6px;
   animation: akPreloaderFadeIn 0.8s ease forwards;
 }
