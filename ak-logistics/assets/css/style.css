@@ -2915,3 +2915,245 @@ img, svg {
     left: 16px;
   }
 }
+
+/* ==========================================================================
+   20. Brand Logo Preloader Animation Screen (3-Second Experience on Home Page)
+   ========================================================================== */
+.ak-preloader {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 45%, #ffffff 0%, #f8fafc 55%, #eef2f6 100%);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.55s ease;
+  pointer-events: all;
+  user-select: none;
+}
+
+.ak-preloader.ak-preloader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(1.02);
+}
+
+.ak-preloader-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  max-width: 440px;
+  width: 100%;
+}
+
+/* Ambient Concentric Ripple Rings */
+.ak-preloader-rings {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  width: 280px;
+  height: 280px;
+  pointer-events: none;
+}
+
+.ak-preloader-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 102, 204, 0.18);
+  animation: akPreloaderRingPulse 2.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+.ak-preloader-ring.ring-1 {
+  animation-delay: 0s;
+}
+
+.ak-preloader-ring.ring-2 {
+  animation-delay: 0.8s;
+  border-color: rgba(56, 189, 248, 0.24);
+}
+
+.ak-preloader-ring.ring-3 {
+  animation-delay: 1.6s;
+  border-color: rgba(0, 102, 204, 0.12);
+}
+
+@keyframes akPreloaderRingPulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* Central Emblem & Orbit Spinner */
+.ak-preloader-logo-wrap {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.ak-preloader-orbit {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #0066cc;
+  border-right-color: #38bdf8;
+  border-bottom-color: rgba(0, 102, 204, 0.15);
+  animation: akPreloaderOrbitSpin 1.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+  box-shadow: 0 0 16px rgba(0, 102, 204, 0.18);
+}
+
+@keyframes akPreloaderOrbitSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ak-preloader-logo-card {
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 12px 36px rgba(0, 102, 204, 0.20),
+              0 2px 8px rgba(0, 0, 0, 0.04),
+              inset 0 0 0 1.5px rgba(0, 102, 204, 0.12);
+  animation: akPreloaderLogoBreath 2.2s ease-in-out infinite alternate;
+}
+
+@keyframes akPreloaderLogoBreath {
+  0% {
+    transform: scale(0.96);
+    box-shadow: 0 8px 24px rgba(0, 102, 204, 0.16);
+  }
+  100% {
+    transform: scale(1.04);
+    box-shadow: 0 16px 42px rgba(0, 102, 204, 0.28);
+  }
+}
+
+.ak-preloader-logo-img {
+  width: 98px;
+  height: 98px;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.10));
+}
+
+/* Brand Typography */
+.ak-preloader-brand {
+  margin-bottom: 22px;
+}
+
+.ak-preloader-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.55rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  background: linear-gradient(135deg, #003380 0%, #0066cc 60%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 6px;
+  animation: akPreloaderFadeIn 0.8s ease forwards;
+}
+
+.ak-preloader-subtitle {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #64748b;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* 3-Second Loading Bar & Counter */
+.ak-preloader-loader {
+  width: 100%;
+  max-width: 260px;
+}
+
+.ak-preloader-bar {
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.ak-preloader-progress {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #0052cc 0%, #0066cc 50%, #38bdf8 100%);
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 102, 204, 0.5);
+  transition: width 0.08s linear;
+}
+
+.ak-preloader-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.ak-preloader-status {
+  font-size: 0.72rem;
+  color: #64748b;
+  letter-spacing: 0.3px;
+}
+
+.ak-preloader-counter {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #0066cc;
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes akPreloaderFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

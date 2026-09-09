@@ -218,9 +218,48 @@
   <!-- Bootstrap Icons 1.11.3 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=17">
+  <link rel="stylesheet" href="assets/css/style.css?v=18">
 </head>
 <body>
+  <!-- ==========================================================================
+       AK Logistics Brand Logo Preloader Animation (3 Seconds on Home Page)
+       ========================================================================== -->
+  <div id="akLogoPreloader" class="ak-preloader">
+    <div class="ak-preloader-content">
+      <!-- Glowing Concentric Pulse Rings -->
+      <div class="ak-preloader-rings">
+        <span class="ak-preloader-ring ring-1"></span>
+        <span class="ak-preloader-ring ring-2"></span>
+        <span class="ak-preloader-ring ring-3"></span>
+      </div>
+
+      <!-- Central Emblem & Orbit Spinner -->
+      <div class="ak-preloader-logo-wrap">
+        <div class="ak-preloader-orbit"></div>
+        <div class="ak-preloader-logo-card">
+          <img src="assets/images/logo.png" alt="AK Logistics" class="ak-preloader-logo-img">
+        </div>
+      </div>
+
+      <!-- Brand Typography -->
+      <div class="ak-preloader-brand">
+        <h2 class="ak-preloader-title">AK LOGISTICS</h2>
+        <p class="ak-preloader-subtitle">3PL &amp; SUPPLY CHAIN SOLUTIONS</p>
+      </div>
+
+      <!-- 3-Second Loading Bar & Counter -->
+      <div class="ak-preloader-loader">
+        <div class="ak-preloader-bar">
+          <span class="ak-preloader-progress" id="akPreloaderProgress"></span>
+        </div>
+        <div class="ak-preloader-meta">
+          <span class="ak-preloader-status" id="akPreloaderStatus">Initializing Fleet Network...</span>
+          <span class="ak-preloader-counter" id="akPreloaderCounter">0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Google Tag Manager (noscript) placeholder
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -1270,6 +1309,6 @@
   <!-- Bootstrap 5.3.3 Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS -->
-  <script src="assets/js/main.js?v=8"></script>
+  <script src="assets/js/main.js?v=9"></script>
 </body>
 </html>

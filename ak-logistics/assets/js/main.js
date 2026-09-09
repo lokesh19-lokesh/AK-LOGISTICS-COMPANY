@@ -8,6 +8,72 @@
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
+  // 0. Brand Logo Preloader Animation (3 Seconds on Home Page)
+  const logoPreloader = document.getElementById('akLogoPreloader');
+  if (logoPreloader) {
+    const progressEl = document.getElementById('akPreloaderProgress');
+    const counterEl = document.getElementById('akPreloaderCounter');
+    const statusEl = document.getElementById('akPreloaderStatus');
+
+    // Prevent background scrolling while preloader is active
+    document.body.style.overflow = 'hidden';
+
+    const totalDuration = 3000; // 3.0 seconds total duration
+    const activeDuration = 2500; // Progress completes at 2.5s
+    const startTime = performance.now();
+
+    const statusMilestones = [
+      { at: 0, text: 'Connecting Fleet Network...' },
+      { at: 35, text: 'Loading 3PL Infrastructure...' },
+      { at: 70, text: 'Synchronizing Supply Chain Hubs...' },
+      { at: 95, text: 'Welcome to AK Logistics' }
+    ];
+
+    const updatePreloader = (now) => {
+      const elapsed = now - startTime;
+      const progressRatio = Math.min(elapsed / activeDuration, 1);
+      const easeProgress = 1 - Math.pow(1 - progressRatio, 3);
+      const percent = Math.floor(easeProgress * 100);
+
+      if (progressEl) {
+        progressEl.style.width = `${percent}%`;
+      }
+      if (counterEl) {
+        counterEl.textContent = `${percent}%`;
+      }
+
+      if (statusEl) {
+        for (let i = statusMilestones.length - 1; i >= 0; i--) {
+          if (percent >= statusMilestones[i].at) {
+            statusEl.textContent = statusMilestones[i].text;
+            break;
+          }
+        }
+      }
+
+      if (elapsed < activeDuration) {
+        requestAnimationFrame(updatePreloader);
+      } else {
+        if (progressEl) progressEl.style.width = '100%';
+        if (counterEl) counterEl.textContent = '100%';
+        if (statusEl) statusEl.textContent = 'Welcome to AK Logistics';
+      }
+    };
+
+    requestAnimationFrame(updatePreloader);
+
+    // Fade out and dismiss at exactly 3.0s (3000ms)
+    setTimeout(() => {
+      logoPreloader.classList.add('ak-preloader-hidden');
+      document.body.style.overflow = '';
+      setTimeout(() => {
+        if (logoPreloader) {
+          logoPreloader.style.display = 'none';
+        }
+      }, 600);
+    }, totalDuration);
+  }
+
   // 1. Back to Top Button Visibility
   const backToTopBtn = document.getElementById('backToTopBtn');
 
