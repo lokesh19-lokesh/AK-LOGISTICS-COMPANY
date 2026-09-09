@@ -25,8 +25,8 @@
   /* Silver, Grays & Surfaces (Clean, Bright & Modern) */
   --ak-white: #ffffff;
   --ak-silver-100: #ffffff;
-  --ak-silver-200: #f8fafc;      /* Clean bright background for alternating sections */
-  --ak-silver-300: #e2e8f0;      /* Clean subtle border */
+  --ak-silver-200: #edf2f7;      /* Clean bright silver background for alternating sections */
+  --ak-silver-300: #cbd5e1;      /* Clean subtle silver border */
   --ak-silver-400: #94a3b8;      /* Mid Silver for secondary meta text */
   --ak-silver-500: #64748b;      /* Slate Silver */
   --ak-silver-border: #e2e8f0;   /* Standard bright card border */
@@ -1524,6 +1524,26 @@ img, svg {
 /* Alternating Sections: Light Silver */
 .bg-light-surface {
   background-color: var(--ak-silver-200); /* Alternating sections: Light Silver */
+}
+
+/* Our 3PL Logistics Services Section - Premium Silver / Platinum Finish */
+#our-services {
+  background: linear-gradient(180deg, #f0f4f8 0%, #e2e8f0 45%, #eaeff5 80%, #f1f5f9 100%) !important;
+  border-top: 1px solid #cbd5e1;
+  border-bottom: 1px solid #cbd5e1;
+  position: relative;
+}
+
+#our-services .ak-card {
+  background-color: #ffffff !important;
+  border: 1px solid #dbe2ec !important;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+}
+
+#our-services .ak-card:hover {
+  transform: translateY(-6px);
+  border-color: #3b82f6 !important;
+  box-shadow: 0 16px 36px -4px rgba(0, 102, 204, 0.16), 0 4px 12px rgba(15, 23, 42, 0.06);
 }
 
 .bg-navy-surface {
