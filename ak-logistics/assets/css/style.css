@@ -1276,9 +1276,10 @@ img, svg {
   left: 0;
   top: 0;
   bottom: 0;
-  width: 50%;
+  width: 33%;
   background: #e5252a;
   border-radius: 4px;
+  transition: width 0.4s ease;
 }
 
 .ak-slider-counter {

@@ -305,23 +305,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentSlide = 0;
 
+    // Preload slide images in browser cache so transitions are instantaneous
+    slides.forEach(slide => {
+      if (slide.image) {
+        const preloader = new Image();
+        preloader.src = slide.image;
+      }
+    });
+
     const updateSlide = (index) => {
       currentSlide = (index + slides.length) % slides.length;
       const slide = slides[currentSlide];
 
-      // Fade transition for background image
+      // Smooth background image transition
       if (heroBg && slide.image) {
         heroBg.style.transition = 'opacity 0.4s ease';
-        heroBg.style.opacity = '0.3';
+        heroBg.style.opacity = '0.35';
         setTimeout(() => {
           heroBg.style.backgroundImage = `url('${slide.image}')`;
           heroBg.style.opacity = '1';
-        }, 200);
+        }, 150);
       }
       
+      // Smooth title transition
       if (heroTitle) {
         heroTitle.style.opacity = '0';
-        heroTitle.style.transform = 'translateY(8px)';
+        heroTitle.style.transform = 'translateY(6px)';
         setTimeout(() => {
           heroTitle.textContent = slide.title;
           heroTitle.style.transition = 'all 0.35s ease';
@@ -330,6 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 150);
       }
 
+      // Smooth description transition
       if (heroDesc) {
         heroDesc.style.opacity = '0';
         setTimeout(() => {
@@ -339,8 +349,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 150);
       }
 
+      // Update counter and progress bar width
       if (heroCounter) heroCounter.textContent = slide.counter;
       if (heroProgressBar) heroProgressBar.style.width = slide.progress;
+    };
+
+    // 4-Second Automatic Sliding Timer
+    let slideInterval = null;
+
+    const startAutoSlide = () => {
+      if (slideInterval) clearInterval(slideInterval);
+      slideInterval = setInterval(() => {
+        updateSlide(currentSlide + 1);
+      }, 4000);
+    };
+
+    const resetAutoSlide = () => {
+      startAutoSlide();
     };
 
     heroNextBtn.addEventListener('click', () => {
@@ -353,23 +378,16 @@ document.addEventListener('DOMContentLoaded', () => {
       resetAutoSlide();
     });
 
-    // 4-Second Automatic Sliding Timer
-    let slideInterval = setInterval(() => {
-      updateSlide(currentSlide + 1);
-    }, 4000);
+    // Start 4-second auto slide cycle immediately
+    startAutoSlide();
 
-    const resetAutoSlide = () => {
-      clearInterval(slideInterval);
-      slideInterval = setInterval(() => {
-        updateSlide(currentSlide + 1);
-      }, 4000);
-    };
-
-    // Pause on hover over hero frame so user can read comfortably
-    const heroFrame = document.querySelector('.ak-hero-frame');
-    if (heroFrame) {
-      heroFrame.addEventListener('mouseenter', () => clearInterval(slideInterval));
-      heroFrame.addEventListener('mouseleave', () => resetAutoSlide());
-    }
+    // Restart timer when tab becomes active again
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) {
+        startAutoSlide();
+      } else {
+        if (slideInterval) clearInterval(slideInterval);
+      }
+    });
   }
 });
