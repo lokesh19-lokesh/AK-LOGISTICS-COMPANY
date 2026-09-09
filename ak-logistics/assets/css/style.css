@@ -345,55 +345,171 @@ img, svg {
   color: #38bdf8 !important;
 }
 
-/* Mobile Offcanvas Submenu Styling */
+/* Mobile Offcanvas Drawer & Submenu Styling (Bright, High Contrast & Modern) */
+#akMobileOffcanvas.offcanvas,
+.offcanvas.ak-mobile-drawer {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+}
+
+#akMobileOffcanvas .offcanvas-header {
+  border-bottom: 1px solid #e2e8f0 !important;
+  background-color: #f8fafc !important;
+  padding: 16px 20px !important;
+}
+
+#akMobileOffcanvas .offcanvas-title {
+  color: #003380 !important;
+  font-weight: 800 !important;
+  font-size: 1.15rem !important;
+}
+
+#akMobileOffcanvas small,
+#akMobileOffcanvas .text-white-50 {
+  color: #64748b !important;
+}
+
+#akMobileOffcanvas .btn-close,
+#akMobileOffcanvas .btn-close-white {
+  filter: none !important;
+  opacity: 0.7;
+}
+
+#akMobileOffcanvas .btn-close:hover {
+  opacity: 1;
+}
+
+#akMobileOffcanvas .nav-link {
+  color: #1e293b !important;
+  font-size: 1.02rem;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px 14px !important;
+  transition: all 0.2s ease;
+}
+
+#akMobileOffcanvas .nav-link:hover,
+#akMobileOffcanvas .nav-link:focus {
+  background-color: #eff6ff !important;
+  color: #0066cc !important;
+}
+
+#akMobileOffcanvas .badge {
+  background-color: #eff6ff !important;
+  color: #0066cc !important;
+  border: 1px solid #bfdbfe !important;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* Mobile Services Toggle Button */
+#mobileServicesToggle {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #1e293b !important;
+}
+
+#mobileServicesToggle:hover,
+#mobileServicesToggle:focus {
+  color: #0066cc !important;
+  background-color: #eff6ff !important;
+}
+
+#mobileServicesToggle[aria-expanded="true"] {
+  color: #0066cc !important;
+  font-weight: 700;
+  background-color: #eff6ff !important;
+}
+
+#mobileServicesChevron {
+  transition: transform 0.25s ease;
+  color: #0066cc;
+  font-size: 0.9rem;
+}
+
+#mobileServicesToggle[aria-expanded="true"] #mobileServicesChevron {
+  transform: rotate(180deg);
+  color: #0066cc;
+}
+
+/* Dropdown Submenu Container - Pure Bright Look */
+#akMobileOffcanvas .collapse ul,
+#mobileServicesSubmenu ul,
+#akMobileOffcanvas ul.bg-black {
+  background-color: #f1f5f9 !important;
+  background: #f1f5f9 !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 12px !important;
+  padding: 8px !important;
+  margin-top: 6px !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+/* Dropdown Submenu Links */
 .ak-mobile-sublink {
-  color: rgba(255, 255, 255, 0.75) !important;
+  color: #0f172a !important;
   font-size: 0.92rem;
-  padding: 9px 14px;
+  font-weight: 600;
+  padding: 9px 12px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   border-radius: 8px;
   transition: all 0.2s ease;
   text-decoration: none;
 }
 
 .ak-mobile-sublink i {
-  width: 24px;
-  min-width: 24px;
-  text-align: center;
-  color: #60a5fa;
-  font-size: 1.15rem;
-  margin-right: 4px;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #0066cc !important;
+  font-size: 1.1rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-}
-
-.ak-mobile-sublink:hover,
-.ak-mobile-sublink:focus {
-  color: #ffffff !important;
-  background-color: rgba(255, 255, 255, 0.12);
-  transform: translateX(4px);
-}
-
-#mobileServicesToggle {
-  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
   transition: all 0.2s ease;
 }
 
-#mobileServicesToggle[aria-expanded="true"] {
+.ak-mobile-sublink:hover,
+.ak-mobile-sublink:focus,
+.ak-mobile-sublink:active {
+  color: #0066cc !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.12);
+  transform: translateX(4px);
+}
+
+.ak-mobile-sublink:hover i,
+.ak-mobile-sublink:focus i {
+  background-color: #0066cc;
   color: #ffffff !important;
+  border-color: #0066cc;
 }
 
-#mobileServicesToggle[aria-expanded="true"] #mobileServicesChevron {
-  transform: rotate(180deg);
-  color: #60a5fa;
+.ak-mobile-sublink.text-info,
+.ak-mobile-sublink.fw-bold {
+  color: #0066cc !important;
+  font-weight: 700 !important;
 }
 
-#mobileServicesChevron {
-  transition: transform 0.25s ease;
+.ak-mobile-sublink.text-info i {
+  background-color: #0066cc;
+  color: #ffffff !important;
+  border-color: #0066cc;
+}
+
+#akMobileOffcanvas .dropdown-divider {
+  border-color: #cbd5e1 !important;
+  opacity: 0.7 !important;
+  margin: 6px 4px;
 }
 
 /* --------------------------------------------------------------------------
@@ -2742,31 +2858,14 @@ img, svg {
     filter: none !important;
   }
 
-  #akMobileOffcanvas .nav-link {
-    color: #334155 !important;
-    font-weight: 600;
-    border-radius: 8px;
-    padding: 10px 14px !important;
-    transition: all var(--ak-transition-fast);
-  }
-
-  #akMobileOffcanvas .nav-link:hover,
-  #akMobileOffcanvas .nav-link:focus {
-    background-color: #eff6ff;
-    color: #0066cc !important;
-  }
-
+  #akMobileOffcanvas #mobileServicesSubmenu ul,
   #akMobileOffcanvas .collapse ul {
-    background: #f1f5f9 !important;
-    border: 1px solid #e2e8f0 !important;
+    background-color: #f1f5f9 !important;
+    border: 1px solid #cbd5e1 !important;
   }
 
   #akMobileOffcanvas .ak-mobile-sublink {
-    color: #475569 !important;
-  }
-
-  #akMobileOffcanvas .ak-mobile-sublink:hover {
-    color: #0066cc !important;
+    color: #0f172a !important;
   }
 
   .ak-brand-img {

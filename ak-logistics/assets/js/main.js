@@ -97,16 +97,16 @@ document.addEventListener('DOMContentLoaded', () => {
       if (mobileServicesChevron) {
         mobileServicesChevron.style.transform = 'rotate(180deg)';
       }
-      mobileServicesToggle.classList.add('text-white');
-      mobileServicesToggle.classList.remove('text-white-50');
+      mobileServicesToggle.classList.add('text-primary');
+      mobileServicesToggle.classList.remove('text-dark', 'text-secondary');
     });
 
     mobileServicesSubmenu.addEventListener('hide.bs.collapse', () => {
       if (mobileServicesChevron) {
         mobileServicesChevron.style.transform = 'rotate(0deg)';
       }
-      mobileServicesToggle.classList.remove('text-white');
-      mobileServicesToggle.classList.add('text-white-50');
+      mobileServicesToggle.classList.remove('text-primary');
+      mobileServicesToggle.classList.add('text-dark');
     });
   }
 
