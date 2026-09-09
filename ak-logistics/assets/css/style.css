@@ -535,7 +535,7 @@ img, svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 28px;
+  padding: 4px 28px;
   gap: 15px;
   background-color: #ffffff;
   border-bottom: 1px solid #f1f5f9;
@@ -553,7 +553,7 @@ img, svg {
   background: rgba(255, 255, 255, 0.98) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  padding: 10px 28px !important;
+  padding: 4px 28px !important;
   box-shadow: 0 10px 30px rgba(0, 86, 179, 0.12) !important;
   border-bottom: 1px solid rgba(0, 102, 204, 0.15) !important;
   animation: akNavSlideIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -572,11 +572,11 @@ img, svg {
 
 @media (max-width: 1280px) {
   .ak-floating-navbar-container {
-    padding: 10px 18px;
+    padding: 3px 18px;
     gap: 10px;
   }
   .ak-floating-navbar-container.is-scrolled {
-    padding: 8px 18px !important;
+    padding: 3px 18px !important;
   }
 }
 
@@ -647,7 +647,7 @@ img, svg {
   box-shadow: 0 4px 14px rgba(0, 102, 204, 0.35);
 }
 
-/* 2. Left Side Corner Logo Badge (Transparent Background & Larger Size) */
+/* 2. Left Side Corner Logo Badge (Transparent Background & Prominent Desktop Size) */
 .ak-nav-logo-badge {
   background: transparent;
   padding: 0;
@@ -658,10 +658,14 @@ img, svg {
   justify-content: center;
   transition: transform 0.3s ease;
   flex-shrink: 0;
+  position: relative;
+  z-index: 10;
+  margin-top: -6px;
+  margin-bottom: -6px;
 }
 
 .ak-nav-logo-badge:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .ak-logo-link {
@@ -672,17 +676,17 @@ img, svg {
 }
 
 .ak-nav-emblem {
-  width: 78px;
-  height: 78px;
+  width: 98px;
+  height: 98px;
   object-fit: contain;
   border-radius: 50%;
-  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.16));
   display: block;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .ak-nav-emblem:hover {
-  filter: drop-shadow(0 6px 18px rgba(0, 102, 204, 0.25));
+  filter: drop-shadow(0 6px 20px rgba(0, 102, 204, 0.3));
 }
 
 /* 3. Right Action Buttons */
@@ -973,23 +977,25 @@ img, svg {
     font-size: 0.8rem;
   }
   .ak-floating-nav-wrapper {
-    min-height: 68px;
+    min-height: 72px;
   }
   .ak-floating-navbar-container {
-    padding: 8px 18px;
+    padding: 3px 18px;
     gap: 10px;
   }
   .ak-floating-navbar-container.is-scrolled {
-    padding: 8px 18px !important;
+    padding: 3px 18px !important;
   }
   .ak-nav-logo-badge {
     padding: 0;
     background: transparent;
     box-shadow: none;
+    margin-top: -5px;
+    margin-bottom: -5px;
   }
   .ak-nav-emblem {
-    width: 66px;
-    height: 66px;
+    width: 90px;
+    height: 90px;
   }
   .ak-pill-link {
     font-size: 0.82rem;
@@ -1084,24 +1090,26 @@ img, svg {
     gap: 4px;
   }
   .ak-floating-nav-wrapper {
-    min-height: 56px;
+    min-height: 64px;
   }
   .ak-floating-navbar-container {
-    padding: 6px 12px;
+    padding: 3px 12px;
     gap: 6px;
   }
   .ak-floating-navbar-container.is-scrolled {
-    padding: 6px 14px !important;
+    padding: 3px 14px !important;
   }
   .ak-nav-logo-badge {
     padding: 0;
     background: transparent;
     border-radius: 50%;
     box-shadow: none;
+    margin-top: -4px;
+    margin-bottom: -4px;
   }
   .ak-nav-emblem {
-    width: 52px;
-    height: 52px;
+    width: 82px;
+    height: 82px;
   }
   .ak-pill-link {
     font-size: 0.74rem;
@@ -1214,6 +1222,7 @@ img, svg {
   }
   .ak-nav-logo-badge {
     margin-top: 0;
+    margin-bottom: 0;
     padding: 0;
     background: transparent !important;
     border-radius: 50%;
