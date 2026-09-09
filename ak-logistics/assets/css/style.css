@@ -1396,6 +1396,381 @@ img, svg {
 }
 
 /* --------------------------------------------------------------------------
+   8.5 About / Who We Are Section (Modern Layered Composition)
+   -------------------------------------------------------------------------- */
+.ak-about-visual-wrap {
+  position: relative;
+  padding: 30px 15px 40px 10px;
+}
+
+/* Floating suspended container on top left */
+.ak-about-hanging-container {
+  position: absolute;
+  top: -35px;
+  left: -20px;
+  width: 140px;
+  z-index: 5;
+  filter: drop-shadow(0 12px 20px rgba(0, 45, 98, 0.25));
+  animation: akFloatContainer 4s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes akFloatContainer {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-8px) rotate(-1.5deg); }
+}
+
+/* Vertical dark accent line on left */
+.ak-about-vertical-bar {
+  position: absolute;
+  left: -5px;
+  top: 130px;
+  width: 5px;
+  height: 180px;
+  background-color: var(--ak-navy);
+  border-radius: 4px;
+  z-index: 2;
+}
+
+/* Main Arched Freight Ship Image */
+.ak-about-main-arch {
+  position: relative;
+  border-radius: 170px 170px 24px 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(11, 28, 56, 0.15);
+  border: 4px solid var(--ak-white);
+  z-index: 2;
+  margin-right: 40px;
+}
+
+.ak-about-main-arch img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.ak-about-visual-wrap:hover .ak-about-main-arch img {
+  transform: scale(1.03);
+}
+
+/* Overlapping Circular Multi-Modal Fleet Badge */
+.ak-about-circle-badge {
+  position: absolute;
+  top: 35px;
+  right: -10px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 7px solid var(--ak-white);
+  box-shadow: 0 16px 36px rgba(11, 28, 56, 0.22);
+  overflow: hidden;
+  z-index: 4;
+}
+
+.ak-about-circle-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.04);
+  transition: transform 0.6s ease;
+}
+
+.ak-about-visual-wrap:hover .ak-about-circle-badge img {
+  transform: scale(1.08);
+}
+
+/* 25+ Years Experience Ribbon Badge */
+.ak-about-experience-ribbon {
+  position: absolute;
+  bottom: 50px;
+  left: -15px;
+  background: linear-gradient(135deg, #ff5e14 0%, #ea580c 100%);
+  color: var(--ak-white);
+  padding: 12px 26px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 8px 24px rgba(234, 88, 12, 0.35);
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: -0.01em;
+}
+
+.ak-about-experience-ribbon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #9a3412;
+  border-left: 10px solid transparent;
+}
+
+/* Right Content Elements */
+.ak-about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #ff5e14;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+}
+
+.ak-about-eyebrow::after {
+  content: '';
+  display: inline-block;
+  width: 36px;
+  height: 2px;
+  background-color: #ff5e14;
+  border-radius: 2px;
+}
+
+.ak-about-title {
+  font-size: clamp(2rem, 3vw, 2.65rem);
+  font-weight: 800;
+  color: var(--ak-navy);
+  line-height: 1.22;
+  margin-bottom: 18px;
+  letter-spacing: -0.025em;
+}
+
+.ak-about-lead {
+  font-size: 1.02rem;
+  color: var(--ak-charcoal);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* 2x2 Feature Checkmarks with double chevron */
+.ak-about-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 20px;
+  margin-bottom: 30px;
+}
+
+.ak-about-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--ak-navy);
+  font-size: 0.95rem;
+}
+
+.ak-about-feature-item i {
+  color: #ff5e14;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+/* Action Buttons & Phone Widget */
+.ak-about-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.btn-ak-about {
+  background: linear-gradient(135deg, #ff5e14 0%, #ea580c 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 13px 30px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.96rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 22px rgba(234, 88, 12, 0.35);
+  transition: all var(--ak-transition-base);
+  text-decoration: none;
+}
+
+.btn-ak-about:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(234, 88, 12, 0.45);
+  color: #ffffff !important;
+}
+
+.ak-about-phone-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  transition: transform var(--ak-transition-fast);
+}
+
+.ak-about-phone-box:hover {
+  transform: translateX(3px);
+}
+
+.ak-about-phone-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--ak-navy);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 6px 16px rgba(11, 28, 56, 0.2);
+  transition: all var(--ak-transition-fast);
+}
+
+.ak-about-phone-box:hover .ak-about-phone-circle {
+  background-color: #ff5e14;
+  transform: scale(1.08);
+}
+
+.ak-about-phone-text small {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--ak-silver-500);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+.ak-about-phone-text strong {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ak-navy);
+  line-height: 1.3;
+}
+
+/* Overlapping Dual-Feature Card at Bottom */
+.ak-about-bottom-card {
+  background: #f1f5f9;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  border-right: 5px solid #ff5e14;
+  padding: 22px 30px;
+  box-shadow: 0 15px 35px rgba(11, 28, 56, 0.07);
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.ak-about-bottom-feature {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.ak-about-bottom-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(11, 28, 56, 0.06);
+}
+
+.ak-about-bottom-icon.icon-orange {
+  color: #ff5e14;
+}
+
+.ak-about-bottom-icon.icon-blue {
+  color: var(--ak-blue);
+}
+
+.ak-about-bottom-text h4 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ak-navy);
+  margin-bottom: 4px;
+}
+
+.ak-about-bottom-text p {
+  font-size: 0.86rem;
+  color: var(--ak-silver-500);
+  margin-bottom: 0;
+  line-height: 1.45;
+}
+
+.ak-about-bottom-divider {
+  width: 1px;
+  height: 52px;
+  background-color: #cbd5e1;
+  flex-shrink: 0;
+}
+
+@media (max-width: 991px) {
+  .ak-about-main-arch {
+    margin-right: 0;
+  }
+  .ak-about-main-arch img {
+    height: 420px;
+  }
+  .ak-about-circle-badge {
+    width: 170px;
+    height: 170px;
+    right: 0px;
+    top: 20px;
+    border-width: 5px;
+  }
+  .ak-about-hanging-container {
+    width: 100px;
+    top: -25px;
+    left: 0px;
+  }
+  .ak-about-bottom-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px;
+  }
+  .ak-about-bottom-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .ak-about-features {
+    grid-template-columns: 1fr;
+  }
+  .ak-about-main-arch {
+    border-radius: 120px 120px 20px 20px;
+  }
+  .ak-about-main-arch img {
+    height: 340px;
+  }
+  .ak-about-circle-badge {
+    width: 130px;
+    height: 130px;
+    right: -5px;
+    top: 15px;
+  }
+  .ak-about-experience-ribbon {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+    bottom: 25px;
+    left: 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
    9. Service Cards & Feature Items (Service Cards: White | Card Borders: Light Silver)
    -------------------------------------------------------------------------- */
 .ak-card {

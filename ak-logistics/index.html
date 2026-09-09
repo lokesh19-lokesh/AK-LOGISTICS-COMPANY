@@ -481,61 +481,100 @@
   </div>
 
   <!-- 4. Section 1: Who We Are -->
-  <section class="section-padding bg-white" id="who-we-are">
+  <section class="section-padding bg-white overflow-hidden" id="who-we-are">
     <div class="container">
       <div class="row align-items-center g-5">
+        <!-- Left Column: Visual Layered Composition -->
         <div class="col-lg-6">
-          <span class="ak-section-eyebrow">Who We Are</span>
-          <h2 class="ak-section-title">Your Dedicated 3PL &amp; Supply Chain Partner in Saudi Arabia</h2>
-          <p class="lead text-dark fw-semibold">
-            AK Logistics Company is a reliable and customer-focused logistics and supply chain solutions provider specializing in domestic parcel deliveries, warehousing support, distribution, and supply chain management.
-          </p>
-          <p class="text-secondary">
-            Headquartered in Riyadh, Kingdom of Saudi Arabia, under the leadership of Mohammed Ahsan Khan, our company provides efficient, secure, and cost-effective logistics solutions that help businesses move their goods with confidence.
-          </p>
-          <p class="text-secondary">
-            Whether you are a growing enterprise or an established corporation, our customized third-party logistics models integrate transportation, secure warehousing, and real-time inventory control to streamline your operations from origin to customer doorstep.
-          </p>
-          <div class="d-flex flex-wrap gap-3 pt-2">
-            <a href="about.html" class="btn btn-ak-primary">
-              <span>Read More About Us</span>
-              <i class="bi bi-arrow-right"></i>
-            </a>
-            <a href="tel:+966550208079" class="btn btn-outline-secondary d-inline-flex align-items-center gap-2">
-              <i class="bi bi-telephone text-primary"></i>
-              <span>+966 550 208 079</span>
-            </a>
+          <div class="ak-about-visual-wrap">
+            <!-- Suspended Container Accent -->
+            <img src="assets/images/about-hanging-container.svg" alt="Container Freight" class="ak-about-hanging-container">
+            
+            <!-- Vertical Dark Accent Bar -->
+            <span class="ak-about-vertical-bar"></span>
+
+            <!-- Main Arched Warehouse & Truck Fleet Image -->
+            <div class="ak-about-main-arch">
+              <img src="assets/images/about-main-trucks.jpg" alt="AK Logistics Commercial Truck Fleet and Modern Riyadh Warehouse Hub" width="540" height="520" loading="lazy">
+            </div>
+
+            <!-- Overlapping Circular Highway Truck Fleet Badge -->
+            <div class="ak-about-circle-badge">
+              <img src="assets/images/about-circle-trucks.jpg" alt="AK Logistics Heavy-Duty Freight Semi-Truck on Highway" width="240" height="240" loading="lazy">
+            </div>
+
+            <!-- 25+ Years Experience Ribbon Badge -->
+            <div class="ak-about-experience-ribbon">
+              <i class="bi bi-patch-check-fill"></i>
+              <span>25+ Years Experience</span>
+            </div>
           </div>
         </div>
 
+        <!-- Right Column: Structured Content & Call Widget -->
         <div class="col-lg-6">
-          <div class="row g-3">
-            <div class="col-sm-6">
-              <div class="ak-card border-top border-4 border-primary">
-                <div class="ak-card-icon"><i class="bi bi-geo-alt"></i></div>
-                <h3 class="h5 ak-card-title">Strategic Riyadh Location</h3>
-                <p class="ak-card-text">Situated in the heart of Saudi Arabia to provide rapid dispatch and centralized distribution nationwide.</p>
+          <span class="ak-about-eyebrow">About Our Company</span>
+          <h2 class="ak-about-title">Why Businesses Trust Our Logistics Solutions</h2>
+          <p class="ak-about-lead">
+            With over two decades of dedicated operational leadership in Saudi Arabia, AK Logistics Company delivers end-to-end 3PL solutions, domestic road freight transportation, and secure warehousing tailored for commercial enterprises throughout the Kingdom and GCC.
+          </p>
+
+          <!-- 2x2 Feature Checkmarks with double chevrons -->
+          <div class="ak-about-features">
+            <div class="ak-about-feature-item">
+              <i class="bi bi-chevron-double-right"></i>
+              <span>Fast &amp; Reliable Delivery</span>
+            </div>
+            <div class="ak-about-feature-item">
+              <i class="bi bi-chevron-double-right"></i>
+              <span>End-to-End Solutions</span>
+            </div>
+            <div class="ak-about-feature-item">
+              <i class="bi bi-chevron-double-right"></i>
+              <span>Smart Technology</span>
+            </div>
+            <div class="ak-about-feature-item">
+              <i class="bi bi-chevron-double-right"></i>
+              <span>Competitive Pricing</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons & Phone Call Widget -->
+          <div class="ak-about-actions">
+            <a href="about.html" class="btn-ak-about">
+              <span>About More</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+            <a href="tel:+966550208079" class="ak-about-phone-box" id="aboutPhoneCall">
+              <span class="ak-about-phone-circle">
+                <i class="bi bi-telephone-fill"></i>
+              </span>
+              <span class="ak-about-phone-text">
+                <small>Call Us Any Time:</small>
+                <strong>+966 550 208 079</strong>
+              </span>
+            </a>
+          </div>
+
+          <!-- Bottom Overlapping Dual-Feature Card -->
+          <div class="ak-about-bottom-card">
+            <div class="ak-about-bottom-feature">
+              <div class="ak-about-bottom-icon icon-orange">
+                <i class="bi bi-truck"></i>
+              </div>
+              <div class="ak-about-bottom-text">
+                <h4>Domestic &amp; GCC Road Freight</h4>
+                <p>Scheduled FTL, LTL, and express line-haul distribution nationwide.</p>
               </div>
             </div>
-            <div class="col-sm-6">
-              <div class="ak-card border-top border-4 border-primary">
-                <div class="ak-card-icon"><i class="bi bi-shield-check"></i></div>
-                <h3 class="h5 ak-card-title">Secure Operations</h3>
-                <p class="ak-card-text">Strict security protocols, cargo handling integrity, and monitored storage facilities for peace of mind.</p>
+            <div class="ak-about-bottom-divider d-none d-md-block"></div>
+            <div class="ak-about-bottom-feature">
+              <div class="ak-about-bottom-icon icon-blue">
+                <i class="bi bi-geo-alt-fill"></i>
               </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="ak-card border-top border-4 border-primary">
-                <div class="ak-card-icon"><i class="bi bi-cpu"></i></div>
-                <h3 class="h5 ak-card-title">Technology-Driven</h3>
-                <p class="ak-card-text">Modern tracking, Transportation Management System (TMS), and transparent inventory reporting.</p>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="ak-card border-top border-4 border-primary">
-                <div class="ak-card-icon"><i class="bi bi-people"></i></div>
-                <h3 class="h5 ak-card-title">Customer-Centric</h3>
-                <p class="ak-card-text">Dedicated account coordination and scalable models tailored precisely to your supply chain needs.</p>
+              <div class="ak-about-bottom-text">
+                <h4>Online Tracing &amp; e-POD</h4>
+                <p>Live telematics GPS tracking and instant digital proof of delivery.</p>
               </div>
             </div>
           </div>
