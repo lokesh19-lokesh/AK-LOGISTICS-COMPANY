@@ -218,7 +218,7 @@
   <!-- Bootstrap Icons 1.11.3 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=10">
+  <link rel="stylesheet" href="assets/css/style.css?v=11">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) placeholder
@@ -697,81 +697,106 @@
     </div>
   </section>
 
-  <!-- 6. Section 3: Why Choose AK Logistics -->
-  <section class="section-padding bg-white" id="why-choose-us">
+  <!-- 6. Section 3: Why Choose AK Logistics (Proven Reliability) -->
+  <section class="ak-reliability-section" id="why-choose-us">
+    <div class="ak-reliability-overlay"></div>
     <div class="container">
       <div class="row align-items-center g-5">
+        <!-- Left Column: Content & Direct Stat Callouts -->
         <div class="col-lg-5">
-          <span class="ak-section-eyebrow">Proven Reliability</span>
-          <h2 class="ak-section-title">Why Businesses Choose AK Logistics</h2>
-          <p class="text-secondary">
-            In today's fast-moving commercial landscape, your logistics partner is the backbone of customer satisfaction. AK Logistics Company combines local Saudi market insight with rigorous operational discipline.
+          <span class="ak-reliability-eyebrow">Proven Reliability</span>
+          <h2 class="ak-reliability-title">Why Businesses Choose AK Logistics</h2>
+          <p class="ak-reliability-lead">
+            In today's fast-moving commercial landscape, your logistics partner is the backbone of customer satisfaction. AK Logistics Company combines local Saudi market insight with rigorous fleet and warehouse operational discipline.
           </p>
-          <div class="p-4 bg-light-surface rounded-3 border-start border-4 border-primary mb-4">
-            <h3 class="h6 fw-bold text-dark mb-1">Our Core Commitment</h3>
-            <p class="small text-secondary mb-0">
-              Delivering innovative, reliable, and customer-centric 3PL solutions that connect businesses, optimize supply chains, and drive sustainable growth.
+
+          <!-- Core Commitment Frosted Glass Box -->
+          <div class="ak-reliability-commitment">
+            <h3><i class="bi bi-shield-check text-info me-2"></i>Our Core Commitment</h3>
+            <p>
+              Delivering innovative, reliable, and customer-centric 3PL solutions that connect businesses, optimize supply chains, and drive sustainable growth across Saudi Arabia.
             </p>
           </div>
-          <a href="why-choose-us.html" class="btn btn-ak-primary">
-            <span>Explore All Advantages</span>
-            <i class="bi bi-arrow-right"></i>
-          </a>
+
+          <div class="d-flex flex-wrap gap-3 align-items-center mb-4">
+            <a href="why-choose-us.html" class="btn btn-ak-quote btn-lg px-4 py-3">
+              <span>Explore All Advantages</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Bottom Stat Boxes Matching Reference Design -->
+          <div class="ak-reliability-stat-row">
+            <div class="ak-reliability-stat-white">
+              <span class="stat-num">426+</span>
+              <span class="stat-lbl">Active Commercial<br>Fleet Routes</span>
+            </div>
+            <a href="tel:+966550208079" class="ak-reliability-stat-glass">
+              <span class="stat-icon">
+                <i class="bi bi-telephone-fill"></i>
+              </span>
+              <div>
+                <span class="stat-phone-lbl">Toll Free &amp; WhatsApp:</span>
+                <span class="stat-phone-num">+966 550 208 079</span>
+              </div>
+            </a>
+          </div>
         </div>
 
+        <!-- Right Column: 6 Frosted Glass Feature Cards -->
         <div class="col-lg-7">
           <div class="row g-4">
             <div class="col-sm-6">
-              <div class="d-flex align-items-start gap-3">
-                <div class="ak-card-icon m-0 flex-shrink-0"><i class="bi bi-truck-front"></i></div>
-                <div>
-                  <h3 class="h6 fw-bold text-dark mb-1">End-to-End Solutions</h3>
-                  <p class="small text-secondary mb-0">Unified management across transport, storage, fulfillment, and return flows.</p>
+              <div class="ak-reliability-card">
+                <div class="ak-reliability-icon"><i class="bi bi-truck-front"></i></div>
+                <div class="ak-reliability-card-content">
+                  <h3>End-to-End Solutions</h3>
+                  <p>Unified management across transport, storage, fulfillment, and return flows.</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="d-flex align-items-start gap-3">
-                <div class="ak-card-icon m-0 flex-shrink-0"><i class="bi bi-clock-history"></i></div>
-                <div>
-                  <h3 class="h6 fw-bold text-dark mb-1">On-Time Delivery</h3>
-                  <p class="small text-secondary mb-0">Optimized scheduling and dedicated route planning to respect committed delivery windows.</p>
+              <div class="ak-reliability-card">
+                <div class="ak-reliability-icon"><i class="bi bi-clock-history"></i></div>
+                <div class="ak-reliability-card-content">
+                  <h3>On-Time Delivery</h3>
+                  <p>Optimized scheduling and dedicated route planning to respect committed delivery windows.</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="d-flex align-items-start gap-3">
-                <div class="ak-card-icon m-0 flex-shrink-0"><i class="bi bi-shield-lock"></i></div>
-                <div>
-                  <h3 class="h6 fw-bold text-dark mb-1">Secure Warehousing</h3>
-                  <p class="small text-secondary mb-0">Monitored Riyadh storage facilities maintaining inventory safety and condition.</p>
+              <div class="ak-reliability-card">
+                <div class="ak-reliability-icon"><i class="bi bi-shield-lock"></i></div>
+                <div class="ak-reliability-card-content">
+                  <h3>Secure Warehousing</h3>
+                  <p>Monitored Riyadh storage facilities maintaining inventory safety and condition.</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="d-flex align-items-start gap-3">
-                <div class="ak-card-icon m-0 flex-shrink-0"><i class="bi bi-cash-stack"></i></div>
-                <div>
-                  <h3 class="h6 fw-bold text-dark mb-1">Cost-Effective Services</h3>
-                  <p class="small text-secondary mb-0">Eliminate excessive fixed overhead through flexible 3PL commercial arrangements.</p>
+              <div class="ak-reliability-card">
+                <div class="ak-reliability-icon"><i class="bi bi-cash-stack"></i></div>
+                <div class="ak-reliability-card-content">
+                  <h3>Cost-Effective Services</h3>
+                  <p>Eliminate excessive fixed overhead through flexible 3PL commercial arrangements.</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="d-flex align-items-start gap-3">
-                <div class="ak-card-icon m-0 flex-shrink-0"><i class="bi bi-broadcast"></i></div>
-                <div>
-                  <h3 class="h6 fw-bold text-dark mb-1">Real-Time Tracking</h3>
-                  <p class="small text-secondary mb-0">Shipment telematics and status updates for end-to-end supply visibility.</p>
+              <div class="ak-reliability-card">
+                <div class="ak-reliability-icon"><i class="bi bi-broadcast"></i></div>
+                <div class="ak-reliability-card-content">
+                  <h3>Real-Time Tracking</h3>
+                  <p>Shipment telematics and status updates for end-to-end supply visibility.</p>
                 </div>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="d-flex align-items-start gap-3">
-                <div class="ak-card-icon m-0 flex-shrink-0"><i class="bi bi-layers"></i></div>
-                <div>
-                  <h3 class="h6 fw-bold text-dark mb-1">Scalable Solutions</h3>
-                  <p class="small text-secondary mb-0">Fleet and warehouse capacity that scales smoothly during peak demand.</p>
+              <div class="ak-reliability-card">
+                <div class="ak-reliability-icon"><i class="bi bi-layers"></i></div>
+                <div class="ak-reliability-card-content">
+                  <h3>Scalable Solutions</h3>
+                  <p>Fleet and warehouse capacity that scales smoothly during peak demand.</p>
                 </div>
               </div>
             </div>

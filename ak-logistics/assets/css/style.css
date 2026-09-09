@@ -1875,6 +1875,224 @@ img, svg {
   flex-shrink: 0;
 }
 
+/* --------------------------------------------------------------------------
+   9.5 Section 3: Proven Reliability (Cinematic Truck Depot Background)
+   -------------------------------------------------------------------------- */
+.ak-reliability-section {
+  position: relative;
+  background-image: url('../images/reliability-truck-bg.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--ak-white);
+  padding: 95px 0 85px;
+  overflow: hidden;
+}
+
+.ak-reliability-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(7, 21, 43, 0.95) 0%, rgba(11, 28, 56, 0.88) 52%, rgba(11, 28, 56, 0.74) 100%);
+  z-index: 1;
+}
+
+.ak-reliability-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.ak-reliability-eyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #38bdf8; /* Luminous sky blue */
+  margin-bottom: 10px;
+}
+
+.ak-reliability-title {
+  font-size: clamp(2rem, 2.8vw, 2.7rem);
+  font-weight: 800;
+  color: var(--ak-white);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.ak-reliability-lead {
+  font-size: 1.02rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.ak-reliability-commitment {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 4px solid var(--ak-blue-light);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 28px;
+}
+
+.ak-reliability-commitment h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ak-white);
+  margin-bottom: 6px;
+}
+
+.ak-reliability-commitment p {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* 6 Feature Cards on Right */
+.ak-reliability-card {
+  background: rgba(11, 28, 56, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  padding: 22px 20px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: all var(--ak-transition-base);
+}
+
+.ak-reliability-card:hover {
+  transform: translateY(-4px);
+  background: rgba(11, 28, 56, 0.85);
+  border-color: #38bdf8;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4);
+}
+
+.ak-reliability-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(0, 86, 179, 0.35);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  flex-shrink: 0;
+  transition: all var(--ak-transition-fast);
+}
+
+.ak-reliability-card:hover .ak-reliability-icon {
+  background: var(--ak-blue);
+  color: #ffffff;
+  border-color: #60a5fa;
+  transform: scale(1.08);
+}
+
+.ak-reliability-card-content h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ak-white);
+  margin-bottom: 6px;
+}
+
+.ak-reliability-card-content p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* Bottom Stat Boxes matching reference image */
+.ak-reliability-stat-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.ak-reliability-stat-white {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.ak-reliability-stat-white .stat-num {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--ak-navy);
+  line-height: 1;
+}
+
+.ak-reliability-stat-white .stat-lbl {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ak-charcoal);
+  line-height: 1.3;
+}
+
+.ak-reliability-stat-glass {
+  background: rgba(7, 21, 43, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  transition: all var(--ak-transition-fast);
+}
+
+.ak-reliability-stat-glass:hover {
+  background: rgba(7, 21, 43, 0.92);
+  border-color: #38bdf8;
+  transform: translateY(-2px);
+}
+
+.ak-reliability-stat-glass .stat-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #ff5e14;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.ak-reliability-stat-glass .stat-phone-lbl {
+  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+}
+
+.ak-reliability-stat-glass .stat-phone-num {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+  display: block;
+}
+
 /* Value Cards (About Page) */
 .ak-value-card {
   background-color: var(--ak-white);
