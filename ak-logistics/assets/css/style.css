@@ -1411,8 +1411,8 @@ img, svg {
 
 .ak-card:hover {
   transform: translateY(-5px);
-  box-shadow: var(--ak-shadow-hover);
-  border-color: var(--ak-blue); /* Highlight border on hover: Logistics Blue */
+  box-shadow: 0 16px 32px -4px rgba(0, 86, 179, 0.12), 0 6px 16px -2px rgba(11, 28, 56, 0.04);
+  border-color: #60a5fa; /* Modern bright luminous blue border */
 }
 
 /* Icons: Logistics Blue */
@@ -1432,9 +1432,11 @@ img, svg {
 }
 
 .ak-card:hover .ak-card-icon {
-  background-color: var(--ak-blue);
-  color: var(--ak-white);
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
+  color: var(--ak-blue);
+  border-color: #93c5fd;
+  box-shadow: 0 6px 18px rgba(0, 86, 179, 0.15);
+  transform: scale(1.08);
 }
 
 .ak-card-title {
@@ -1909,8 +1911,8 @@ img, svg {
 }
 
 .ak-industry-card:hover {
-  border-color: var(--ak-blue);              /* Logistics Blue */
-  box-shadow: var(--ak-shadow-hover);
+  border-color: #60a5fa;              /* Luminous modern blue */
+  box-shadow: 0 16px 32px -4px rgba(0, 86, 179, 0.12), 0 6px 16px -2px rgba(11, 28, 56, 0.04);
   transform: translateY(-4px);
 }
 
@@ -1929,8 +1931,11 @@ img, svg {
 }
 
 .ak-industry-card:hover .ak-industry-icon {
-  background-color: var(--ak-blue);
-  color: var(--ak-white);
+  background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
+  color: var(--ak-blue);
+  border: 1px solid #93c5fd;
+  box-shadow: 0 6px 18px rgba(0, 86, 179, 0.15);
+  transform: scale(1.08);
 }
 
 /* --------------------------------------------------------------------------
