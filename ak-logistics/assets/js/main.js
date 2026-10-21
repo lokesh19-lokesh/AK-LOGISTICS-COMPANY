@@ -456,4 +456,33 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 12. Certificate Preview Modal Handler (About Us Page)
+  const certModal = document.getElementById('certPreviewModal');
+  if (certModal) {
+    certModal.addEventListener('show.bs.modal', (event) => {
+      const trigger = event.relatedTarget;
+      if (!trigger) return;
+      const title = trigger.getAttribute('data-cert-title') || 'Official Certificate';
+      const imgSrc = trigger.getAttribute('data-cert-img') || '';
+      const pdfSrc = trigger.getAttribute('data-cert-pdf') || '#';
+
+      const modalTitle = certModal.querySelector('#certPreviewModalLabel');
+      const modalImg = certModal.querySelector('#certModalImage');
+      const viewBtn = certModal.querySelector('#certModalViewBtn');
+      const downloadBtn = certModal.querySelector('#certModalDownloadBtn');
+
+      if (modalTitle) modalTitle.textContent = title;
+      if (modalImg) {
+        modalImg.src = imgSrc;
+        modalImg.alt = title;
+      }
+      if (viewBtn) viewBtn.href = pdfSrc;
+      if (downloadBtn) {
+        downloadBtn.href = pdfSrc;
+        const filename = pdfSrc.split('/').pop() || 'Certificate.pdf';
+        downloadBtn.setAttribute('download', filename);
+      }
+    });
+  }
 });
