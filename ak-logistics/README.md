@@ -8,9 +8,15 @@ Built strictly using **HTML5, CSS3, Vanilla JavaScript, and Bootstrap 5.3.3 / Bo
 
 ## 1. Company Profile
 
-* **Company Name:** AK Logistics Company
+* **Company Name:** AK Logistics LLC (AK Logistics Company)
 * **Business Type:** Third-Party Logistics (3PL) and Supply Chain Solutions Provider
-* **Headquarters:** Riyadh, Kingdom of Saudi Arabia
+* **Headquarters / Registered Address:**
+  * AK Logistics LLC
+  * RCWA3539
+  * Building Number - 3539
+  * Naeem Ibn Hammad Street
+  * 8647- Al Wizarat Street - 12622
+  * Riyadh, Kingdom of Saudi Arabia
 * **Proprietor / Leadership:** Mohammed Ahsan Khan
 * **Contact Phone:** +966 550 208 079
 * **WhatsApp Direct:** https://wa.me/966550208079
